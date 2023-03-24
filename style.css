@@ -1,0 +1,484 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #1A1A1A;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+/*nav style*/
+nav{
+    position: fixed;
+    background-color: #0599F2;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+
+}
+nav a:hover{
+    color: #1A1A1A;
+}
+.home a{
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out transform;
+}
+.home a:hover{
+    transform: scale(1);
+}
+.logo{
+    margin-top: 10px ;
+    margin-left: 5%;
+}
+
+.button a{
+    background-color: white;
+    color: #0599F2;
+    padding: 0.5px 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+    border: 2.3px white solid ;
+    transition: 0.35s;
+}
+.button a:hover{
+    background-color: #0597f2;
+    color: white;
+    border: 2.3px white solid ;
+}
+/* [END] nav style*/
+#images{
+    width: 100%;
+    border-bottom: 2px #0597f2 solid;
+}
+#pragraph{
+    height: 400px;
+    width: 100%;
+    border-bottom: 2px #0597f2 solid;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.content-text{
+    margin-top: 40px;
+    font-size: 25px;
+}
+.content-text h1 , h2{
+    font-weight: 400;
+}
+
+#list{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    color: white;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Background.png");
+    background-size: cover;
+    background-position: center;
+}
+#list h1{
+    text-align: center;
+    font-size: 40px;
+}
+#list li{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.right{
+    margin-left: 70px;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+footer{
+    background-color: #0597f2;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logos{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.line{
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    margin: 0px 20px;
+    margin-top: auto;
+}
+.lines-between{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 320px;
+}
+.soical{
+    color: white;
+    display: flex;
+    direction: ltr;
+    position: absolute;
+    left: 400px;
+    font-family: "Open Sans";
+}
+.twitter , .instagram , .youtube{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.fa-brands{
+    font-size: 30px;
+}
+.lines-between2{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 1132px;
+}
+.links-footer a{
+    text-decoration: none;
+    color: white;
+    margin: 5px 0px;
+}
+.links-footer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    left: 1200px;
+    text-align: center;
+
+
+}
+.links-footer h1{
+    margin: 0px;
+}
+.links-footer a{
+    transition: 0.2s;
+}
+.links-footer a:hover{
+    color: #1A1A1A;
+}
+.lines-between3{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 1400px;
+}
+.text{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.slider{
+    width: 800;
+    height: 500;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 1s;
+}
+
+.slide img{
+    width: 100%;
+}
+
+.nav-manual{
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #0597f2;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-bottom: 20px;
+}
+
+.manual-btn:not(:last-child){
+    margin-left: 40px;
+}
+
+.manual-btn:hover{
+    background: #0597f2;
+}
+#radio1:checked ~ .frist{
+    margin-left: 0px;
+}
+#radio2:checked ~ .frist{
+    margin-left: -20%;
+}
+#radio3:checked ~ .frist{
+    margin-left: -40%;
+}
+#radio4:checked ~ .frist{
+    margin-left: -60%;
+}
+@media screen and (max-width: 1700px){
+    .text{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+        /*footer style start*/
+        footer{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 800px;
+        }
+        .logos{
+            display: flex;
+            flex-direction: column;
+            top: 10px;
+            position: absolute;
+        }
+        .line{
+            display: none;
+        }
+        .tarmeez{
+            height: 15px;
+        }
+        .imamu{
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        .links-footer{
+            position: absolute;
+            top: 400px;
+            left: 45%;
+        }
+        .soical{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 160px;
+            left: 41%;
+        }
+        .soical span{
+            font-family: "Open Sans";
+        }
+        
+        .instagram span{
+            margin-left: 5px;
+        }
+        .lines-between{
+            width: 200px;
+            height: 3px;
+            top: 140px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between2{
+            width: 200px;
+            height: 3px;
+            top: 370px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between3{
+            width: 200px;
+            height: 3px;
+            top: 640px;
+            left: 41%;
+            position: absolute;
+        }
+        .twitter , .instagram , .youtube{
+            font-size: 15px;
+            margin: 16px 0px;
+            margin-left: 30px;
+        }
+        .text{
+            position: absolute;
+            bottom: 40px;
+            
+        }
+}
+@media screen and (max-width: 428px) {
+    /* nav style*/
+    nav a{
+        font-size: 16px;
+    }
+    .logo{
+        display: none;
+    }
+    .button a{
+        padding: 0px 10px;
+    }
+    /* nav style end*/
+    /* start style slider image*/
+
+    .slide img{
+        height: 100%;
+        width: 100%;
+    }
+    /* end style slider image*/
+    /* start style middle*/
+
+    #pragraph{
+        padding-bottom: 80px;
+        margin: 0px;
+    }
+    .content-text{
+        margin-top: 0px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-text h1{
+        font-size: 30px;
+    }
+    .content-text h2{
+        font-size: 20px;
+    }
+    /* end style middle*/
+    /* start style list*/
+    #list li{
+        font-size: 15px;
+        margin-right: 15px;
+    }
+    #list h1{
+        margin-top: 0px;
+    }
+    .right{
+        padding-right: 10px;
+        margin-left: 40px;
+    }
+    .cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slides{
+        height: 320px;
+    }
+    /* end style list*/
+    /*footer style start*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 800px;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        position: absolute;
+    }
+    .line{
+        display: none;
+    }
+    .tarmeez{
+        height: 15px;
+    }
+    .imamu{
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .links-footer{
+        position: absolute;
+        top: 400px;
+        left: 33%;
+    }
+    .soical{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 160px;
+        left: 25%;
+
+    }
+    .soical span{
+        font-family: "Open Sans";
+    }
+    
+    .instagram span{
+        margin-left: 5px;
+    }
+    .lines-between{
+        width: 200px;
+        height: 3px;
+        top: 140px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between2{
+        width: 200px;
+        height: 3px;
+        top: 370px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between3{
+        width: 200px;
+        height: 3px;
+        top: 640px;
+        left: 28%;
+        position: absolute;
+    }
+    .twitter , .instagram , .youtube{
+        font-size: 15px;
+        margin: 16px 0px;
+        margin-left: 30px;
+    }
+    .text{
+        position: absolute;
+        bottom: 40px;
+        
+    }
+
+    /*footer style end*/
+}

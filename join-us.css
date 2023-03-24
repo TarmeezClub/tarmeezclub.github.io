@@ -1,0 +1,712 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #1A1A1A;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+
+}
+/*nav style*/
+nav{
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    background-color: #0599F2;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+
+}
+nav a:hover{
+    color: #1A1A1A;
+}
+.home a{
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out transform;
+}
+.home a:hover{
+    transform: scale(1);
+}
+.logo{
+    margin-top: 10px ;
+    margin-left: 5%;
+}
+
+.button a{
+    background-color: white;
+    color: #0599F2;
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+    border: 2.3px white solid ;
+    transition: 0.35s;
+}
+.button a:hover{
+    background-color: #0597f2;
+    color: white;
+    border: 2.3px white solid ;
+}
+/* [END] nav style*/
+#sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0px;
+}
+.forms-join{
+    background-color: #0599F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 30px;
+    padding: 18px 20px;
+    max-width: 600px;
+}
+.name{
+    font-weight: bold;
+}
+.major{
+    font-weight: bold;
+}
+.major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
+    margin-top: 30px;
+}
+label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
+    font-weight: bold;
+}
+.level input[type="number"], .major input[type="text"], .name input[type="text"],.phone-number input[type="tel"] {
+    height: 30px;
+}
+.other input[type="text"]{
+    height: 30px;
+}
+.talk-about-your-self ::placeholder{
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.631);
+}
+.talk-about-your-self input[type = "text"], .info input[type = "text"]{
+    color: white;
+    height: 70px;
+    background-color: #0071B2;
+    border: 0;
+    border-radius: 3px;
+    width: 100%;
+
+}
+.forms-join input[type = "text"]{
+    color: white;
+    background-color: #0071B2;
+    border: 0;
+    border-radius: 3px;
+}
+.forms-join input[type="number"]{
+    color: white;
+    background-color: #0071B2;
+    border: 0;
+    border-radius: 3px;
+}
+.forms-join input[type="tel"]{
+    color: white;
+    background-color: #0071B2;
+    border: 0;
+    border-radius: 3px;
+}
+.name , .level , .major , .talk-about-your-self, .phone-number{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.experince{
+    display: flex;
+}
+.experince label{
+    display: flex;
+    justify-content: start;
+    
+}
+.python , .java-script , .java , .html-css, .swift , .sql , .dart , .php{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+
+}
+.down{
+    display: flex;
+}
+.info ,.experince{
+    margin-top: 30px;
+}
+.info label , p{
+    margin: 0;
+}
+.info label{
+    font-weight: bold;
+}
+.info p{
+    font-weight: normal;
+    margin-top: 10px;
+    font-size: 12px;
+    max-width: 80%;
+}
+.info{
+    width: 100%;
+}
+.sugg{
+    width: 100%;
+}
+.sugg input[type="text"]{
+    width: 100%;
+    height: 30px;
+}
+.sugg p{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: normal;
+    width: 80%;
+}
+
+.button-send{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.send{
+    font-family: "Noto kufi Arabic";
+    font-size: 16px;
+    width: 120px;
+    margin-left: 20px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #0071B2;
+    color: white;
+    border: 0.5px solid #0071B2;
+}
+.reset{
+    font-family: "Noto kufi Arabic";
+    font-size: 16px;
+    width: 120px;
+    margin-left: 20px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #cc4f01;
+    border: 0.5px solid #cc4f01;
+    color: white;
+}
+.send:hover{
+    background-color: #0068a4;
+    border: 0.5px solid white;
+}
+.reset:hover{
+    background-color: #cc4f01;
+    border: 0.5px solid white;
+}
+.phone-number ::placeholder{
+    color: rgba(255, 255, 255, 0.631);
+}
+footer{
+    background-color: #0597f2;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logos{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.line{
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    margin: 0px 20px;
+    margin-top: auto;
+}
+.lines-between{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 320px;
+}
+.soical{
+    color: white;
+    display: flex;
+    direction: ltr;
+    position: absolute;
+    left: 400px;
+    font-family: "Open Sans";
+}
+.twitter , .instagram , .youtube{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.fa-brands{
+    font-size: 30px;
+}
+.lines-between2{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 1132px;
+}
+.links-footer a{
+    text-decoration: none;
+    color: white;
+    margin: 5px 0px;
+}
+.links-footer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    left: 1200px;
+    text-align: center;
+
+
+}
+.links-footer h1{
+    margin: 0px;
+}
+.links-footer a{
+    transition: 0.2s;
+}
+.links-footer a:hover{
+    color: #1A1A1A;
+}
+.lines-between3{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 1400px;
+}
+.text{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1700px){
+    .text{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+        /*footer style start*/
+        footer{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 800px;
+        }
+        .logos{
+            display: flex;
+            flex-direction: column;
+            top: 10px;
+            position: absolute;
+        }
+        .line{
+            display: none;
+        }
+        .tarmeez{
+            height: 15px;
+        }
+        .imamu{
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        .links-footer{
+            position: absolute;
+            top: 400px;
+            left: 45%;
+        }
+        .soical{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 160px;
+            left: 41%;
+        }
+        .soical span{
+            font-family: "Open Sans";
+        }
+        
+        .instagram span{
+            margin-left: 5px;
+        }
+        .lines-between{
+            width: 200px;
+            height: 3px;
+            top: 140px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between2{
+            width: 200px;
+            height: 3px;
+            top: 370px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between3{
+            width: 200px;
+            height: 3px;
+            top: 640px;
+            left: 41%;
+            position: absolute;
+        }
+        .twitter , .instagram , .youtube{
+            font-size: 15px;
+            margin: 16px 0px;
+            margin-left: 30px;
+        }
+        .text{
+            position: absolute;
+            bottom: 40px;
+            
+        }
+}
+@media screen and (max-width: 428px) {
+    /* nav style*/
+    nav a{
+        font-size: 16px;
+    }
+    .logo{
+        display: none;
+    }
+    .button a{
+        padding: 0px 10px;
+    }
+    /* nav style end*/
+    /* start style slider image*/
+
+    .slide img{
+        height: 100%;
+        width: 100%;
+    }
+    /* end style slider image*/
+    /* start style middle*/
+
+    #pragraph{
+        padding-bottom: 80px;
+        margin: 0px;
+    }
+    .content-text{
+        margin-top: 0px;
+    }
+    /* end style middle*/
+    /* start style list*/
+    #list li{
+        font-size: 15px;
+        margin-right: 15px;
+    }
+    #list h1{
+        margin-top: 0px;
+    }
+    /* end style list*/
+    /*footer style start*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 800px;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        position: absolute;
+    }
+    .line{
+        display: none;
+    }
+    .tarmeez{
+        height: 15px;
+    }
+    .imamu{
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .links-footer{
+        position: absolute;
+        top: 400px;
+        left: 33%;
+    }
+    .soical{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 160px;
+        left: 25%;
+
+    }
+    .soical span{
+        font-family: "Open Sans";
+    }
+    
+    .instagram span{
+        margin-left: 5px;
+    }
+    .lines-between{
+        width: 200px;
+        height: 3px;
+        top: 140px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between2{
+        width: 200px;
+        height: 3px;
+        top: 370px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between3{
+        width: 200px;
+        height: 3px;
+        top: 640px;
+        left: 28%;
+        position: absolute;
+    }
+    .twitter , .instagram , .youtube{
+        font-size: 15px;
+        margin: 16px 0px;
+        margin-left: 30px;
+    }
+    .text{
+        position: absolute;
+        bottom: 40px;
+        
+    }
+
+    /*footer style end*/
+}
+
+@media screen and (max-width: 1700px){
+    .text{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+        /*footer style start*/
+        footer{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 800px;
+        }
+        .logos{
+            display: flex;
+            flex-direction: column;
+            top: 10px;
+            position: absolute;
+        }
+        .line{
+            display: none;
+        }
+        .tarmeez{
+            height: 15px;
+        }
+        .imamu{
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        .links-footer{
+            position: absolute;
+            top: 400px;
+            left: 45%;
+        }
+        .soical{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 160px;
+            left: 41%;
+        }
+        .soical span{
+            font-family: "Open Sans";
+        }
+        
+        .instagram span{
+            margin-left: 5px;
+        }
+        .lines-between{
+            width: 200px;
+            height: 3px;
+            top: 140px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between2{
+            width: 200px;
+            height: 3px;
+            top: 370px;
+            left: 41%;
+            position: absolute;
+        }
+        .lines-between3{
+            width: 200px;
+            height: 3px;
+            top: 640px;
+            left: 41%;
+            position: absolute;
+        }
+        .twitter , .instagram , .youtube{
+            font-size: 15px;
+            margin: 16px 0px;
+            margin-left: 30px;
+        }
+        .text{
+            position: absolute;
+            bottom: 40px;
+            
+        }
+}
+@media screen and (max-width: 428px) {
+    /* nav style*/
+    nav a{
+        font-size: 16px;
+    }
+    .logo{
+        display: none;
+    }
+    .button a{
+        padding: 0px 10px;
+    }
+    /* nav style end*/
+    /* start style slider image*/
+
+    .slide img{
+        height: 100%;
+        width: 100%;
+    }
+    /* end style slider image*/
+    /* start style middle*/
+
+    #pragraph{
+        padding-bottom: 80px;
+        margin: 0px;
+    }
+    .content-text{
+        margin-top: 0px;
+    }
+    /* end style middle*/
+    /* start style list*/
+    #list li{
+        font-size: 15px;
+        margin-right: 15px;
+    }
+    #list h1{
+        margin-top: 0px;
+    }
+    /* end style list*/
+    /*footer style start*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 800px;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        position: absolute;
+    }
+    .line{
+        display: none;
+    }
+    .tarmeez{
+        height: 15px;
+    }
+    .imamu{
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .links-footer{
+        position: absolute;
+        top: 400px;
+        left: 33%;
+    }
+    .soical{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 160px;
+        left: 25%;
+
+    }
+    .soical span{
+        font-family: "Open Sans";
+    }
+    
+    .instagram span{
+        margin-left: 5px;
+    }
+    .lines-between{
+        width: 200px;
+        height: 3px;
+        top: 140px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between2{
+        width: 200px;
+        height: 3px;
+        top: 370px;
+        left: 28%;
+        position: absolute;
+    }
+    .lines-between3{
+        width: 200px;
+        height: 3px;
+        top: 640px;
+        left: 28%;
+        position: absolute;
+    }
+    .twitter , .instagram , .youtube{
+        font-size: 15px;
+        margin: 16px 0px;
+        margin-left: 30px;
+    }
+    .text{
+        position: absolute;
+        bottom: 40px;
+        
+    }
+
+    /*footer style end*/
+}
