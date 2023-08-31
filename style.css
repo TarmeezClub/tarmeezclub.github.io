@@ -6,7 +6,6 @@ body{
     font-family: 'Noto Kufi Arabic', sans-serif;
     margin: 0;
     padding: 0;
-
 }
 /*nav style*/
 nav{
@@ -39,7 +38,6 @@ nav a:hover{
 }
 .logo{
     margin-top: 10px ;
-    margin-left: 5%;
 }
 
 .button a{
@@ -480,5 +478,6 @@ footer{
         
     }
 
+    
     /*footer style end*/
 }

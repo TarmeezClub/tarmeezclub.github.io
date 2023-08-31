@@ -43,7 +43,6 @@ nav a:hover{
 }
 .logo{
     margin-top: 10px ;
-    margin-left: 5%;
 }
 
 .button a{
@@ -61,6 +60,22 @@ nav a:hover{
     border: 2.3px white solid ;
 }
 /* [END] nav style*/
+.introductionWrapper{
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introduction{
+    border: 5px solid #0599F2;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    width: fit-content;
+}
+.introduction h3{
+    font-size: 20px;
+}
 #sign{
     display: flex;
     justify-content: center;
@@ -83,17 +98,40 @@ nav a:hover{
 .major{
     font-weight: bold;
 }
-.major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
-    margin-top: 30px;
-}
-label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
+.phoneOrEmail{
     font-weight: bold;
 }
-.level input[type="number"], .major input[type="text"], .name input[type="text"],.phone-number input[type="tel"] {
+.ideaName{
+    font-weight: bold;
+}
+.target{
+    font-weight: bold;
+}
+.platform{
+    font-weight: bold;
+}
+.major , .level , .ideaName , .ideaDetails, .target, .talk-about-your-self, .info , .email, .phoneOrEmail, .phone-number, .sugg{
+    margin-top: 30px;
+}
+label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self, .info , .email, .phoneOrEmail, .phone-number, .sugg{
+    font-weight: bold;
+}
+.email input[type="email"]{
+    height: 20px;
+}
+.level input[type="number"], .major input[type="text"], .ideaName input[type="text"], .target input[type="text"], .name input[type="text"],.phoneOrEmail input[type="text"], .phone-number input[type="tel"]{
     height: 30px;
 }
 .other input[type="text"]{
     height: 30px;
+}
+.ideaDetails input[type = "text"], .info input[type = "text"]{
+    color: white;
+    height: 70px;
+    background-color: #0071B2;
+    border: 0;
+    border-radius: 3px;
+    width: 100%;
 }
 .talk-about-your-self ::placeholder{
     position: absolute;
@@ -108,8 +146,8 @@ label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
     border: 0;
     border-radius: 3px;
     width: 100%;
-
 }
+
 .forms-join input[type = "text"]{
     color: white;
     background-color: #0071B2;
@@ -128,10 +166,17 @@ label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
     border: 0;
     border-radius: 3px;
 }
-.name , .level , .major , .talk-about-your-self, .phone-number{
+.name , .level , .major , .ideaName , .ideaDetails, .target, .talk-about-your-self, .email, .phoneOrEmail, .phone-number{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+.platform{
+    display: flex;
+}
+.platform label{
+    display: flex;
+    justify-content: start;
 }
 .experince{
     display: flex;
@@ -139,7 +184,13 @@ label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
 .experince label{
     display: flex;
     justify-content: start;
-    
+}
+.IOS, .Android, .Web{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
 }
 .python , .java-script , .java , .html-css, .swift , .sql , .dart , .php{
     display: flex;
@@ -147,12 +198,11 @@ label .major , .level , .talk-about-your-self, .info , .phone-number, .sugg{
     justify-content: center;
     align-items: center;
     margin-left: 20px;
-
 }
 .down{
     display: flex;
 }
-.info ,.experince{
+.info , .platform , .experince{
     margin-top: 30px;
 }
 .info label , p{
@@ -704,9 +754,12 @@ footer{
     }
     .text{
         position: absolute;
-        bottom: 40px;
-        
+        bottom: 40px; 
+    }
+    .introduction h3{
+        font-size: 13px;
     }
 
+    
     /*footer style end*/
 }

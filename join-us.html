@@ -32,21 +32,58 @@
             <a href="#">انضم لنا</a>
         </div>
     </nav>
+    <div class="introductionWrapper">
+        <div class="introduction">
+            <h3>ولأن احد اهداف النادي الأساسية هو تطوير الحلول التقنية للطلاب والمجتمع</h3>
+            <h3>نود أعطاكم الفرصة لطرح ومشاركة افكاركم أو المشاكل التي تواجهونها كطلاب</h3>
+        </div>
+    </div>
+
+    
     <section id="sign">
-    <form class="forms-join" action="https://sheetdb.io/api/v1/1b162xdla65qp" method="post" id="sheetdb-form">
+    <form class="forms-join" action="https://sheetdb.io/api/v1/2ugwqmef4jmdw" method="post" id="sheetdb-form">
         <div class="name">
-            <label for="name">أسم المبدع خلف الشاشة ؟</label>
+            <label for="name">أسم المبدع</label>
             <input type="text" name="data[name]" id="name" required>
         </div>
-        <div class="major">
+        <!-- <div class="major">
             <label for="major">تخصصك الجامعي ؟</label>
             <input type="text" name="data[major]" id="major" required>
-        </div>
-        <div class="level">
+        </div> -->
+        <!-- <div class="level">
             <label for="level">مستواك ؟</label>
             <input type="number" name="data[level]" id="level" min="1" max="10" required>
+        </div> -->
+        <div class="ideaName">
+            <label for="ideaName">عنوان الفكرة ؟</label>
+            <input type="text" name="data[IdeaTitle]" id="ideaName" required>
         </div>
-        <div class="talk-about-your-self">
+        <div class="ideaDetails">
+            <label for="ideaDetails">تفاصيل الفكرة او المشكلة</label>
+            <input type="text" name="data[IdeaDetails]" id="ideaDetails" required>
+        </div>
+        <div class="target">
+            <label for="target">الفئة المستهدفة ؟</label>
+            <input type="text" name="data[Target]" id="target" required>
+        </div>
+
+        <div class="platform">
+            <label for="platform">المنصات المستهدفة : </label>
+            <div class="IOS">
+                <label for="IOS">IOS</label>
+                <input type="checkbox" name="data[iOS]" id="IOS">
+            </div>
+            <div class="Android">
+                <label for="Android">Android</label>
+                <input type="checkbox" name="data[Android]" id="Android">
+            </div>
+            <div class="Web">
+                <label for="Web">Web</label>
+                <input type="checkbox" name="data[Web]" id="Web">
+            </div>
+        </div>
+
+        <!-- <div class="talk-about-your-self">
             <label for="talk">تحدث عن خبرتك في مهارات انت فنان فيها ؟</label>
             <input type="text" name="data[talk]" id="talk" placeholder="مثلًا : التصوير ، المونتاج ..." required>
         </div>
@@ -67,8 +104,8 @@
                 <label for="swift">swift - swiftUI</label>
                 <input type="checkbox" name="data[swift]" id="swift">
             </div>
-        </div>
-        <div class="down">
+        </div> -->
+        <!-- <div class="down">
             <div class="sql">
                 <label for="sql">SQL</label>
                 <input type="checkbox" name="data[sql]" id="sql">
@@ -86,21 +123,21 @@
                 <label for="other">اخرى:</label>
                 <input type="text" name="data[other]" id="other" placeholder="java...">
             </div>
-        </div>
-        <div class="info">
+        </div> -->
+        <!-- <div class="info">
             <label for="info">ممكن تشاركنا معلومات عن خبرتك البرمجية ؟</label>
             <p>في حال كان عندك خبرة في احد اللغات الي حددتها او مشاريع سويتها اكتب لنا عنها</p>
             <input type="text" name="data[info]" id="info" required>
+        </div> -->
+        <div class="phoneOrEmail">
+            <label for="phoneOrEmail">رقم الهاتف</label>
+            <input type="text" name="data[Phone]" id="phoneOrEmail" required>
         </div>
-        <div class="phone-number">
-            <label for="phone">رقم جوالك ؟</label>
-            <input type="tel" name="data[phone number]" id="phone" min="10" maxlength="13" placeholder="تقدر تحط +966 او 05..." required inputmode="tel">
-        </div>
-        <div class="sugg">
+        <!-- <div class="sugg">
             <label for="sugg">أي اضافات او اقتراحات للنادي ؟</label>
             <p>ودنا انك تساعد في تطورنا وتكتب لنا اقتراحاتك حتى تكون بدايتنا قوية</p>
             <input type="text" name="data[sugg]" id="sugg">
-        </div>
+        </div> -->
         <div class="button-send">
             <input class="send" type="submit" value="إرسال">
             <input class="reset" type="reset" value=" حذف">
