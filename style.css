@@ -148,6 +148,7 @@ footer{
     position: absolute;
     left: 400px;
     font-family: "Open Sans";
+    text-decoration: none;
 }
 .twitter , .instagram , .youtube{
     margin-left: 20px;
