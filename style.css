@@ -115,9 +115,9 @@ nav a:hover{
 footer{
     background-color: #0597f2;
     width: 100%;
-    height: 250px;
+    /* height: 250px; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 .logos{
@@ -127,7 +127,7 @@ footer{
     margin-left: 10px;
 }
 
-.line{
+/* .line{
     width: 2px;
     height: 70px;
     background-color: white;
@@ -140,18 +140,22 @@ footer{
     background-color: white;
     position: absolute;
     left: 320px;
-}
+} */
 .soical{
     color: white;
     display: flex;
     direction: ltr;
-    position: absolute;
+    /* position: absolute; */
+    /* ??????????????????????? why absolute?????????????????????????????????!!! */
     left: 400px;
     font-family: "Open Sans";
     text-decoration: none;
 }
+.soical a{
+    color: white;
+}
 .twitter , .instagram , .youtube{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 25px;
 }
 .fa-brands{
@@ -161,7 +165,7 @@ footer{
     width: 3px;
     height: 140px;
     background-color: white;
-    position: absolute;
+    /* position: absolute; */
     left: 1132px;
 }
 .links-footer a{
@@ -170,7 +174,7 @@ footer{
     margin: 5px 0px;
 }
 .links-footer{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     color: white;
