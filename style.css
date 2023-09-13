@@ -189,6 +189,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: start;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 100px;
     padding: 40px 0;
@@ -339,27 +340,7 @@ footer .about-us p{
         .instagram span{
             /* margin-left: 5px; */
         }
-        /* .lines-between{
-            width: 200px;
-            height: 3px;
-            top: 140px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between2{
-            width: 200px;
-            height: 3px;
-            top: 370px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between3{
-            width: 200px;
-            height: 3px;
-            top: 640px;
-            left: 41%;
-            position: absolute;
-        } */
+
         .twitter , .instagram , .youtube{
             font-size: 15px;
             /* margin: 16px 0px; */
@@ -369,7 +350,7 @@ footer .about-us p{
             /* bottom: 40px; */
         }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
     /* nav style*/
     nav a{
         font-size: 16px;
@@ -433,19 +414,23 @@ footer .about-us p{
     /*footer style start*/
     footer{
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         position: relative;
-        height: 800px;
+        gap: 100px;
+        /* padding: 10px; */
+    
+        /* height: 800px; */
     }
+    
     .logos{
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        top: 10px;
         /* position: absolute; */
     }
-    .line{
-        display: none;
-    }
+
     .tarmeez{
         height: 15px;
     }
@@ -455,42 +440,34 @@ footer .about-us p{
     }
     .links-footer{
         /* position: absolute; */
-        top: 400px;
-        left: 33%;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .links-footer .links {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .links-footer .links a{
+        text-align: center;
     }
     .soical{
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
         /* position: absolute; */
-        top: 160px;
-        left: 25%;
-
     }
     .soical span{
         font-family: "Open Sans";
     }
-    
     .instagram span{
         margin-left: 5px;
     }
-    /* .lines-between{
-        width: 200px;
-        height: 3px;
-        top: 140px;
-        left: 28%;
-    }
-    .lines-between2{
-        width: 200px;
-        height: 3px;
-        top: 370px;
-        left: 28%;
-    }
-    .lines-between3{
-        width: 200px;
-        height: 3px;
-        top: 640px;
-        left: 28%;
-    } */
     .twitter , .instagram , .youtube{
         font-size: 15px;
         margin: 16px 0px;
@@ -501,7 +478,9 @@ footer .about-us p{
         bottom: 40px;
         
     }
-
-    
+    .about-us{
+        justify-content: center;
+        align-items: center;
+    }
     /*footer style end*/
 }
