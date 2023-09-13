@@ -55,159 +55,7 @@ nav a:hover{
     border: 2.3px white solid ;
 }
 /* [END] nav style*/
-#images{
-    width: 100%;
-    border-bottom: 2px #0597f2 solid;
-}
-#pragraph{
-    height: 400px;
-    width: 100%;
-    border-bottom: 2px #0597f2 solid;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    
-}
-.content-text{
-    margin-top: 40px;
-    font-size: 25px;
-}
-.content-text h1 , h2{
-    font-weight: 400;
-}
-
-#list{
-    display: flex;
-    height: 400px;
-    width: 100%;
-    color: white;
-}
-.background{
-    width: 100%;
-    height: 100%;
-    background-image: url("images/Background.png");
-    background-size: cover;
-    background-position: center;
-}
-#list h1{
-    text-align: center;
-    font-size: 40px;
-}
-#list li{
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-.cont{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.right{
-    margin-left: 70px;
-}
-.head{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 40px;
-}
-footer{
-    background-color: #0597f2;
-    width: 100%;
-    /* height: 250px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.logos{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-left: 10px;
-}
-
-/* .line{
-    width: 2px;
-    height: 70px;
-    background-color: white;
-    margin: 0px 20px;
-    margin-top: auto;
-}
-.lines-between{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    position: absolute;
-    left: 320px;
-} */
-.soical{
-    color: white;
-    display: flex;
-    direction: ltr;
-    /* position: absolute; */
-    /* ??????????????????????? why absolute?????????????????????????????????!!! */
-    left: 400px;
-    font-family: "Open Sans";
-    text-decoration: none;
-}
-.soical a{
-    color: white;
-}
-.twitter , .instagram , .youtube{
-    /* margin-left: 20px; */
-    font-size: 25px;
-}
-.fa-brands{
-    font-size: 30px;
-}
-.lines-between2{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    /* position: absolute; */
-    left: 1132px;
-}
-.links-footer a{
-    text-decoration: none;
-    color: white;
-    margin: 5px 0px;
-}
-.links-footer{
-    /* position: absolute; */
-    display: flex;
-    flex-direction: column;
-    color: white;
-    left: 1200px;
-    text-align: center;
-
-
-}
-.links-footer h1{
-    margin: 0px;
-}
-.links-footer a{
-    transition: 0.2s;
-}
-.links-footer a:hover{
-    color: #1A1A1A;
-}
-.lines-between3{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    position: absolute;
-    left: 1400px;
-}
-.text{
-    position: absolute;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    margin-right: 20px;
-    font-size: 20px;
-}
+/* Slider */
 .slider{
     width: 800;
     height: 500;
@@ -266,56 +114,232 @@ footer{
 #radio4:checked ~ .frist{
     margin-left: -60%;
 }
-@media screen and (max-width: 1700px){
+
+
+#images{
+    width: 100%;
+    border-bottom: 2px #0597f2 solid;
+}
+/* [END] Slider*/
+/* pragraph */
+#pragraph{
+    height: 400px;
+    width: 100%;
+    border-bottom: 2px #0597f2 solid;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.content-text{
+    /* margin-top: 40px; */
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content-text h1 , h2{
+    font-weight: 400;
+}
+/* list */
+#list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.background{
+    padding: 100px 0;
+    width: 100%;
+    height: 100%;
+    height: 70vh;
+    background-image: url("images/Background.png");
+    background-size: cover;
+    background-position: center;
+}
+#list h1{
+    text-align: center;
+    font-size: 40px;
+}
+#list li{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.right{
+    margin-left: 70px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Footer */
+footer{
+    background-color: #0597f2;
+    width: 100%;
+    /* height: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    gap: 100px;
+    padding: 40px 0;
+    
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    height: 100%;
+    /* background-color: red; */
+}
+
+
+/* .line{
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    margin: 0px 20px;
+    margin-top: auto;
+}
+.lines-between{
+    width: 3px;
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 320px;
+} */
+footer .about-us{
+    color: white;
+}
+footer .about-us h4{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+footer .about-us p{
+    margin: 0;
+}
+
+.soical{
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    direction: ltr;
+    /* position: absolute; */
+    /* ??????????????????????? why absolute?????????????????????????????????!!! */
+    /* left: 400px; */
+    font-family: "Open Sans";
+    text-decoration: none;
+    
+}
+.soical a{
+    color: #e7e7e7;
+    transition: .3s;
+}
+.soical a:hover{
+    color: #1A1A1A;
+}
+.twitter , .instagram , .youtube{
+    /* margin-left: 20px; */
+    font-size: 25px;
+}
+.fa-brands{
+    font-size: 30px;
+}
+
+
+.links-footer{
+    /* position: absolute; */
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+
+    text-align:right;
+    /* padding: 0; */
+}
+.links-footer h4{
+    margin: 0px;
+    /* margin-bottom: 20px; */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.links-footer .links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+
+    /* padding-top: 20px; */
+    /* margin-top: 20px; */
+}
+.links-footer a{
+    text-decoration: none;
+    color: #e7e7e7;
+    text-align: right;
+    /* margin: 5px 0px; */
+    transition: 0.2s;
+}
+.links-footer a:hover{
+    color: #1A1A1A;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    color: #e7e7e7;
+    /* margin-right: 20px; */
+    font-size: 20px;
+}
+.text h4{
+    color: white;
+    font-size: 20px;
+    margin: 0;
+
+}
+
+/* @media screen and (max-width: 1700px){
     .text{
         font-size: 16px;
     }
-}
+} */
 
 @media screen and (max-width: 1024px) {
         /*footer style start*/
-        footer{
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            height: 800px;
-        }
-        .logos{
-            display: flex;
-            flex-direction: column;
-            top: 10px;
-            position: absolute;
-        }
-        .line{
-            display: none;
-        }
         .tarmeez{
-            height: 15px;
+            /* height: 15px; */
         }
         .imamu{
-            height: 50px;
-            margin-bottom: 30px;
-        }
-        .links-footer{
-            position: absolute;
-            top: 400px;
-            left: 45%;
+            /* height: 50px; */
+            /* margin-bottom: 30px; */
         }
         .soical{
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 160px;
-            left: 41%;
+            /* display: flex; */
+            /* flex-direction: column; */
         }
         .soical span{
-            font-family: "Open Sans";
+            /* font-family: "Open Sans"; */
         }
         
         .instagram span{
-            margin-left: 5px;
+            /* margin-left: 5px; */
         }
-        .lines-between{
+        /* .lines-between{
             width: 200px;
             height: 3px;
             top: 140px;
@@ -335,16 +359,14 @@ footer{
             top: 640px;
             left: 41%;
             position: absolute;
-        }
+        } */
         .twitter , .instagram , .youtube{
             font-size: 15px;
-            margin: 16px 0px;
-            margin-left: 30px;
+            /* margin: 16px 0px; */
+            margin-left: 10px;
         }
         .text{
-            position: absolute;
-            bottom: 40px;
-            
+            /* bottom: 40px; */
         }
 }
 @media screen and (max-width: 428px) {
@@ -356,7 +378,7 @@ footer{
         display: none;
     }
     .button a{
-        padding: 0px 10px;
+        /* padding: 0px 10px; */
     }
     /* nav style end*/
     /* start style slider image*/
@@ -419,7 +441,7 @@ footer{
         display: flex;
         flex-direction: column;
         top: 10px;
-        position: absolute;
+        /* position: absolute; */
     }
     .line{
         display: none;
@@ -432,14 +454,14 @@ footer{
         margin-bottom: 30px;
     }
     .links-footer{
-        position: absolute;
+        /* position: absolute; */
         top: 400px;
         left: 33%;
     }
     .soical{
         display: flex;
         flex-direction: column;
-        position: absolute;
+        /* position: absolute; */
         top: 160px;
         left: 25%;
 
@@ -451,34 +473,31 @@ footer{
     .instagram span{
         margin-left: 5px;
     }
-    .lines-between{
+    /* .lines-between{
         width: 200px;
         height: 3px;
         top: 140px;
         left: 28%;
-        position: absolute;
     }
     .lines-between2{
         width: 200px;
         height: 3px;
         top: 370px;
         left: 28%;
-        position: absolute;
     }
     .lines-between3{
         width: 200px;
         height: 3px;
         top: 640px;
         left: 28%;
-        position: absolute;
-    }
+    } */
     .twitter , .instagram , .youtube{
         font-size: 15px;
         margin: 16px 0px;
         margin-left: 30px;
     }
     .text{
-        position: absolute;
+        /* position: absolute; */
         bottom: 40px;
         
     }
