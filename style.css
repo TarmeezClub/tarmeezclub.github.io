@@ -16,6 +16,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 50;
 }
 nav a{
     text-decoration: none;
@@ -78,21 +79,29 @@ nav a:hover{
 
 .slide img{
     width: 100%;
+    height: 100%;
 }
 
 .nav-manual{
     margin-top: -40px;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 180px;
+    bottom: 0;
+    width: 100%;
+    
 }
 
 .manual-btn{
-    border: 2px solid #0597f2;
+    border: 1px solid #0597f2;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
     margin-bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .manual-btn:not(:last-child){
@@ -102,19 +111,34 @@ nav a:hover{
 .manual-btn:hover{
     background: #0597f2;
 }
-#radio1:checked ~ .frist{
-    margin-left: 0px;
+.frist{
+    margin-left: -20%;
+    position: relative;
 }
-#radio2:checked ~ .frist{
+#radio1:checked ~ .frist{
     margin-left: -20%;
 }
-#radio3:checked ~ .frist{
+#radio2:checked ~ .frist{
     margin-left: -40%;
 }
-#radio4:checked ~ .frist{
+#radio3:checked ~ .frist{
     margin-left: -60%;
 }
-
+#radio4:checked ~ .frist{
+    margin-left: -80%;
+}
+#radio1:checked ~ .frist label[for="radio1"]{
+    background: #0597f2;
+}
+#radio2:checked ~ .frist label[for="radio2"]{
+    background: #0597f2;
+}
+#radio3:checked ~ .frist label[for="radio3"]{
+    background: #0597f2;
+}
+#radio4:checked ~ .frist label[for="radio4"]{
+    background: #0597f2;
+}
 
 #images{
     width: 100%;

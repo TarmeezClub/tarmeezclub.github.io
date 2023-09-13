@@ -1,3 +1,4 @@
+// all icons
 let worksIcons = {
     "java":"java(1).png",
     "py":"python.svg",
@@ -11,6 +12,7 @@ let worksIcons = {
 }
 let membersSection = document.querySelector('#members');
 
+// Title HTML Builder
 function titleBuilder(title){
     let titleHTML = `
         <div class="lines">
@@ -23,14 +25,14 @@ function titleBuilder(title){
     return titleHTML;
 
 }
+// Card HTML Builder
 function cardBuilder(member){
-    console.log('card builder');
-    console.log(member);
+    // works builder, Ex: swift, python, java, ..etc
     let cardWorks = ''
     for(let j of member.works){
         cardWorks += `
         <div class="icon3">
-            <img src="icons/${worksIcons[j]}" alt="no Icon  " width="30px">
+            <img src="icons/${worksIcons[j]}" alt="no Icon" width="30px">
         </div>
         `
     }
@@ -52,26 +54,20 @@ function cardBuilder(member){
 
 }
 
-
+// Main function to get members from members.json
 async function getMembers(){
     membersSection.innerHTML =''
     let htmlInsert = ``
     let data = await((await fetch('/database/members.json')).json());
-    console.log(data);
-    keys = Object.keys(data)
+    keys = Object.keys(data);
     for(let i of keys){
-        console.log(i);
-        console.log(data[i]);
-        htmlInsert += titleBuilder(i)
-        htmlInsert+='<div class="member-flex">'
-        for(let j in data[i]){
-            htmlInsert += cardBuilder(data[i][j])
-            
-        }
+        htmlInsert += titleBuilder(i);
+        htmlInsert+='<div class="member-flex">';
+        for(let j in data[i])
+            htmlInsert += cardBuilder(data[i][j]);
         htmlInsert+='</div>'
-
     }
     membersSection.innerHTML = htmlInsert
 }
 
-getMembers()
+getMembers();
