@@ -147,14 +147,13 @@ nav a:hover{
 /* [END] Slider*/
 /* pragraph */
 #pragraph{
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* height: 400px; */
     width: 100%;
     border-bottom: 2px #0597f2 solid;
     color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    
 }
 .content-text{
     /* margin-top: 40px; */
@@ -163,9 +162,53 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
-.content-text h1 , h2{
+.content-text h1 {
+    position: relative;
+    padding-bottom: 20px;
+}
+.content-text h1::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 150px;
+    height: 2px;
+    background-color: #0597f2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content-text h1{
     font-weight: 400;
+}
+.content-text p span{
+    color: #0597f2;
+    font-weight: bolder;
+}
+.content-text .left-c{
+    position: absolute;
+    left: 5%;
+    transform: rotateY(180deg);
+    /* transform: rotateZ(90deg); */
+    font-size: 300px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    z-index: -1;
+    opacity: .05;
+}
+.content-text .right-c{
+    z-index: -1;
+    position: absolute;
+    right: 5%;
+    transform: rotateY(180deg);
+    /* transform: rotateZ(270deg); */
+    font-size: 300px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    opacity: .05;
 }
 /* list */
 #list{
@@ -403,15 +446,20 @@ footer .about-us p{
         margin-top: 0px;
         height: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     .content-text h1{
         font-size: 30px;
     }
-    .content-text h2{
+    .content-text p{
         font-size: 20px;
+        color: #e7e7e7;
+    }
+    .content-text .left-c,.content-text .right-c{
+        font-size: 200px;
+        opacity: 0.01;
     }
     /* end style middle*/
     /* start style list*/
@@ -507,4 +555,6 @@ footer .about-us p{
         align-items: center;
     }
     /*footer style end*/
+
+
 }
