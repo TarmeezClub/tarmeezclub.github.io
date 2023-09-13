@@ -35,7 +35,6 @@ function cardBuilder(member){
         `
     }
     let cardHTML = `
-    <div class="member-flex">
     <div class="flexbox flexbox-member">
         <div class="card">
             <div class="border-user">
@@ -47,7 +46,6 @@ function cardBuilder(member){
             <div class="tags-icons">${cardWorks}</div>
         </div>
     </div>
-</div>
     
     `
     return cardHTML;
@@ -65,7 +63,7 @@ async function getMembers(){
         console.log(i);
         console.log(data[i]);
         htmlInsert += titleBuilder(i)
-        htmlInsert+='<div class="contaner-cards">'
+        htmlInsert+='<div class="member-flex">'
         for(let j in data[i]){
             htmlInsert += cardBuilder(data[i][j])
             
