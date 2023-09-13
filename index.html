@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
     <!--font arabic-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,115 +21,125 @@
     <title>Tarmeez</title>
 </head>
 <body>
-    <nav>
-        <div class="links">
-            <a class="home" href="#images">الرئيسية</a>
-            <a href="suggetions.html">الإقتراحات</a>
-            <a href="us.html">نحن</a>
+        <div class="navbar">
+            <nav>
+                <a href="#"><img class="logo"  src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('links')">
+                    <path
+                          class="lines top"
+                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path
+                          class="lines middle"
+                          d="m 30,50 h 40" />
+                    <path
+                          class="lines bottom"
+                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                  </svg>
+                </label>
+                <ul class="links">
+                    <li><a class="home" href="#">الرئيسية</a></li>
+                    <li><a href="suggetions.html">الإقتراحات</a></li>
+                    <li><a href="us.html">نحن</a></li>
+                    <li class="button"><a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a></li>
+                </ul> 
+            </nav>
         </div>
-        <div class="logo">
-            <a href="#images"><img src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
-        </div>
-        <div class="button">
-            <a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a>
-        </div>
-        
-    </nav>
-    <section id="images">
-        <div class="slider">
-            <div class="slides">
+        <section id="images">
+            <div class="slider">
+                <div class="slides">
 
-                <input type="radio" name="radio-btn" id="radio1" checked>
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio1" checked>
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
 
-                <div class="slide frist">
-                    <!-- <img src="images-slider/1.jpg" alt=""> -->
-                    <div class="nav-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
+                    <div class="slide frist">
+                        <!-- <img src="images-slider/1.jpg" alt=""> -->
+                        <div class="nav-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images-slider/1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images-slider/2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images-slider/3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images-slider/4.jpg" alt="">
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="images-slider/1.jpg" alt="">
+            </div>
+        </section>
+        <section id="pragraph">
+            <div class="content-text">
+                <h1>ترميز..</h1>
+                <h2>منطقة للمبدعين والشغوفين فقط.!
+                <div>مكانك لتبدع وتظهر مهاراتك..</div></h2>
+            </div>
+        </section>
+        <section id="list">
+            <div class="background">
+                <div class="head">
+                <h1 style="font-size: 30px;">أهداف النادي</h1>
+                <div class="cont">
+                    <div class="right">
+                        <li>جمع ألمع العقول لمشاركة وتبادل الخبرات.</li>
+                        <li>إقامة التحديات والفعاليات التنافسية</li>
+                    </div>
+                    <div class="left">
+                        <li>تطوير التقنيات وجعلها في متناول الجميع.</li>
+                        <li>التطوير من الأعضاء بإكسابهم خبرات عملية</li>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="images-slider/2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images-slider/3.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images-slider/4.jpg" alt="">
                 </div>
             </div>
-            
-        </div>
-    </section>
-    <section id="pragraph">
-        <div class="content-text">
-        <h1>ترميز..</h1>
-        <h2>منطقة للمبدعين والشغوفين فقط.!
-        <div>مكانك لتبدع وتظهر مهاراتك..</div></h2>
-    </div>
-    </section>
-    <section id="list">
-        <div class="background">
-            <div class="head">
-            <h1 style="font-size: 30px;">أهداف النادي</h1>
-            <div class="cont">
-                <div class="right">
-                    <li>جمع ألمع العقول لمشاركة وتبادل الخبرات.</li>
-                    <li>إقامة التحديات والفعاليات التنافسية</li>
-                </div>
-                <div class="left">
-                    <li>تطوير التقنيات وجعلها في متناول الجميع.</li>
-                    <li>التطوير من الأعضاء بإكسابهم خبرات عملية</li>
-                </div>
+        </section>
+        <footer>
+            <div class="logos">
+                <img class="imamu" src="images/Imam_Logo_white.png" alt="logo imamu" height="80px">
+                <img class="tarmeez" src="images/tarmeez_logo_white.png" alt="" height=20px>
             </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="logos">
-            <img class="imamu" src="images/Imam_Logo_white.png" alt="logo imamu" height="80px">
-            <img class="tarmeez" src="images/tarmeez_logo_white.png" alt="" height=20px>
-        </div>
 
-        <div class="links-footer">
-            <h4>عن ترميز</h4>
-            <div class="links">
-                <a href="/">الرئيسية</a>
-                <a href="#" hidden>منشوراتنا</a>
-                <a href="us.html">نحن</a>
-                <a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a>
-            </div>
-        </div>
-        <div class="about-us">
-            <div class="text">
-                <h4 >ترميز</h4>
-                <p>نادي محفوف بالشغف والإبداع...</p>
-            </div>
-            <h4>تواصل معنا</h4>
-            <div class="soical">
-                <div class="twitter">
-                    <a href="https://x.com/tarmeezclub?s=21&t=So_EXtmogrYcc4DwNeQ7ww" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
-                    <!-- <span>@tarmeezClub</span> -->
-                </div>
-                <div class="youtube">
-                    <a href="#" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
-                    <!-- <span>@tarmeezClub</span> -->
-                </div>
-                <div class="instagram">
-                    <!-- <span>@tarmeezClub</span> -->
-                    <a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            <div class="links-footer">
+                <h4>عن ترميز</h4>
+                <div class="links">
+                    <a href="/">الرئيسية</a>
+                    <a href="#" hidden>منشوراتنا</a>
+                    <a href="us.html">نحن</a>
+                    <a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a>
                 </div>
             </div>
+            <div class="about-us">
+                <div class="text">
+                    <h4 >ترميز</h4>
+                    <p>نادي محفوف بالشغف والإبداع...</p>
+                </div>
+                <h4>تواصل معنا</h4>
+                <div class="soical">
+                    <div class="twitter">
+                        <a href="https://x.com/tarmeezclub?s=21&t=So_EXtmogrYcc4DwNeQ7ww" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+                        <!-- <span>@tarmeezClub</span> -->
+                    </div>
+                    <div class="youtube">
+                        <a href="#" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
+                        <!-- <span>@tarmeezClub</span> -->
+                    </div>
+                    <div class="instagram">
+                        <!-- <span>@tarmeezClub</span> -->
+                        <a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
            
-        </div>
-    </footer>
+            </div>
+        </footer>
 </body>
 </html>

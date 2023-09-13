@@ -7,58 +7,8 @@ body{
     margin: 0;
     padding: 0;
     color: white;
-    
-
-}
-/*nav style*/
-nav{
-    position: fixed;
-    top: 0px;
-    z-index: 999;
-    background-color: #0599F2;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-nav a{
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    transition: 0.3s;
-
-}
-nav a:hover{
-    color: #1A1A1A;
-}
-.home a{
-    transform: scale(0.9);
-    transition: 0.3s ease-in-out transform;
-}
-.home a:hover{
-    transform: scale(1);
-}
-.logo{
-    margin-top: 10px ;
 }
 
-.button a{
-    background-color: white;
-    color: #0599F2;
-    padding: 5px 30px;
-    border-radius: 5px;
-    margin-left: 15px;
-    border: 2.3px white solid ;
-    transition: 0.35s;
-}
-.button a:hover{
-    background-color: #0597f2;
-    color: white;
-    border: 2.3px white solid ;
-}
 /* [END] nav style*/
 .introductionWrapper{
     padding-top: 90px;
@@ -366,95 +316,90 @@ footer{
     margin-right: 20px;
     font-size: 20px;
 }
-
 @media screen and (max-width: 1700px){
     .text{
         font-size: 16px;
     }
 }
-
 @media screen and (max-width: 1024px) {
-        /*footer style start*/
-        footer{
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            height: 800px;
-        }
-        .logos{
-            display: flex;
-            flex-direction: column;
-            top: 10px;
-            position: absolute;
-        }
-        .line{
-            display: none;
-        }
-        .tarmeez{
-            height: 15px;
-        }
-        .imamu{
-            height: 50px;
-            margin-bottom: 30px;
-        }
-        .links-footer{
-            position: absolute;
-            top: 400px;
-            left: 45%;
-        }
-        .soical{
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 160px;
-            left: 41%;
-        }
-        .soical span{
-            font-family: "Open Sans";
-        }
+    /*footer style start*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 800px;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        position: absolute;
+    }
+    .line{
+        display: none;
+    }
+    .tarmeez{
+        height: 15px;
+    }
+    .imamu{
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .links-footer{
+        position: absolute;
+        top: 400px;
+        left: 45%;
+    }
+    .soical{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 160px;
+        left: 41%;
+    }
+    .soical span{
+        font-family: "Open Sans";
+    }
+    
+    .instagram span{
+        margin-left: 5px;
+    }
+    .lines-between{
+        width: 200px;
+        height: 3px;
+        top: 140px;
+        left: 41%;
+        position: absolute;
+    }
+    .lines-between2{
+        width: 200px;
+        height: 3px;
+        top: 370px;
+        left: 41%;
+        position: absolute;
+    }
+    .lines-between3{
+        width: 200px;
+        height: 3px;
+        top: 640px;
+        left: 41%;
+        position: absolute;
+    }
+    .twitter , .instagram , .youtube{
+        font-size: 15px;
+        margin: 16px 0px;
+        margin-left: 30px;
+    }
+    .text{
+        position: absolute;
+        bottom: 40px;
         
-        .instagram span{
-            margin-left: 5px;
-        }
-        .lines-between{
-            width: 200px;
-            height: 3px;
-            top: 140px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between2{
-            width: 200px;
-            height: 3px;
-            top: 370px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between3{
-            width: 200px;
-            height: 3px;
-            top: 640px;
-            left: 41%;
-            position: absolute;
-        }
-        .twitter , .instagram , .youtube{
-            font-size: 15px;
-            margin: 16px 0px;
-            margin-left: 30px;
-        }
-        .text{
-            position: absolute;
-            bottom: 40px;
-            
-        }
+    }
 }
 @media screen and (max-width: 428px) {
     /* nav style*/
     nav a{
         font-size: 16px;
-    }
-    .logo{
-        display: none;
     }
     .button a{
         padding: 0px 10px;
@@ -563,95 +508,90 @@ footer{
 
     /*footer style end*/
 }
-
 @media screen and (max-width: 1700px){
     .text{
         font-size: 16px;
     }
 }
-
 @media screen and (max-width: 1024px) {
-        /*footer style start*/
-        footer{
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            height: 800px;
-        }
-        .logos{
-            display: flex;
-            flex-direction: column;
-            top: 10px;
-            position: absolute;
-        }
-        .line{
-            display: none;
-        }
-        .tarmeez{
-            height: 15px;
-        }
-        .imamu{
-            height: 50px;
-            margin-bottom: 30px;
-        }
-        .links-footer{
-            position: absolute;
-            top: 400px;
-            left: 45%;
-        }
-        .soical{
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 160px;
-            left: 41%;
-        }
-        .soical span{
-            font-family: "Open Sans";
-        }
+    /*footer style start*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 800px;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        position: absolute;
+    }
+    .line{
+        display: none;
+    }
+    .tarmeez{
+        height: 15px;
+    }
+    .imamu{
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .links-footer{
+        position: absolute;
+        top: 400px;
+        left: 45%;
+    }
+    .soical{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 160px;
+        left: 41%;
+    }
+    .soical span{
+        font-family: "Open Sans";
+    }
+    
+    .instagram span{
+        margin-left: 5px;
+    }
+    .lines-between{
+        width: 200px;
+        height: 3px;
+        top: 140px;
+        left: 41%;
+        position: absolute;
+    }
+    .lines-between2{
+        width: 200px;
+        height: 3px;
+        top: 370px;
+        left: 41%;
+        position: absolute;
+    }
+    .lines-between3{
+        width: 200px;
+        height: 3px;
+        top: 640px;
+        left: 41%;
+        position: absolute;
+    }
+    .twitter , .instagram , .youtube{
+        font-size: 15px;
+        margin: 16px 0px;
+        margin-left: 30px;
+    }
+    .text{
+        position: absolute;
+        bottom: 40px;
         
-        .instagram span{
-            margin-left: 5px;
-        }
-        .lines-between{
-            width: 200px;
-            height: 3px;
-            top: 140px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between2{
-            width: 200px;
-            height: 3px;
-            top: 370px;
-            left: 41%;
-            position: absolute;
-        }
-        .lines-between3{
-            width: 200px;
-            height: 3px;
-            top: 640px;
-            left: 41%;
-            position: absolute;
-        }
-        .twitter , .instagram , .youtube{
-            font-size: 15px;
-            margin: 16px 0px;
-            margin-left: 30px;
-        }
-        .text{
-            position: absolute;
-            bottom: 40px;
-            
-        }
+    }
 }
 @media screen and (max-width: 428px) {
     /* nav style*/
     nav a{
         font-size: 16px;
-    }
-    .logo{
-        display: none;
     }
     .button a{
         padding: 0px 10px;

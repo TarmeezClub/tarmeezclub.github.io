@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="us.css">
+    <link rel="stylesheet" href="navbar.css">
         <!--font arabic-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,21 +21,32 @@
     <title>Tarmeez | نحن</title>
 </head>
 <body>
-    <nav id="nav">
-        <div class="links">
-            <a class="home" href="index.html">الرئيسية</a>
-            <a href="suggetions.html">الإقتراحات</a>
-            <a href="us.html">نحن</a>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <a href="#"><img class="logo"  src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('links')">
+                    <path
+                          class="lines top"
+                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path
+                          class="lines middle"
+                          d="m 30,50 h 40" />
+                    <path
+                          class="lines bottom"
+                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                  </svg>
+                </label>
+                <ul class="links">
+                    <li><a class="home" href="index.html">الرئيسية</a></li>
+                    <li><a href="suggetions.html">الإقتراحات</a></li>
+                    <li><a href="us.html">نحن</a></li>
+                    <li class="button"><a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a></li>
+                </ul> 
+            </nav>
         </div>
-        <div class="logo">
-            <a href="#top"><img src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
-        </div>
-        <div class="button">
-            <a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a>
-        </div>
-
-       
-    </nav>
     <section id="top"></section>
     <section id="top-text">
         <h1>من نحن ؟</h1>
@@ -307,5 +319,6 @@
         </div>
     </footer>
     <script src="js/us.js"></script>
+</div>
 </body>
 </html>

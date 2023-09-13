@@ -1,6 +1,13 @@
 html{
     scroll-behavior: smooth;
 }
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none; 
+    box-sizing: border-box;
+}
 body{
     background-color: #1A1A1A;
     font-family: 'Noto Kufi Arabic', sans-serif;
@@ -9,29 +16,60 @@ body{
     color: white;
 
 }
+.container{
+    width: 100%; 
+    overflow: hidden;
+}
 /*nav style*/
-nav{
-    position: fixed;
-    top: 0px;
-    z-index: 999;
-    background-color: #0599F2;
-    height: 60px;
-    width: 100%;
+.navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 }
-nav a{
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: #0599F2;
+}
+nav ul{
+    display: flex;
+    position: absolute;
+    margin: 0 auto;
+    justify-content: flex-end;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+}
+nav ul li{
+    line-height: 60px;
+    margin: 0 5px;
+    padding: 0 15px;
+}
+nav ul li a{
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
-    transition: 0.3s;
-
 }
-nav a:hover{
+nav ul li a:hover{
     color: #1A1A1A;
+    transition: 0.3s;
+}
+.logo{
+    margin-top: 15px ;
+    margin-right: 20px;
+    float: right;
+}
+#check{
+    display: none; /*removing the defualt check box*/
+}
+.checkbtn{
+    cursor: pointer;
+    display: none; /* making it disappear for all screen sizes*/
+    float: left;
+    font-size: 30px;
+    margin-top: -10px ; 
 }
 .home a{
     transform: scale(0.9);
@@ -40,17 +78,11 @@ nav a:hover{
 .home a:hover{
     transform: scale(1);
 }
-.logo{
-    margin-top: 10px ;
-    margin-left: 5%;
-}
-
 .button a{
     background-color: white;
     color: #0599F2;
-    padding: 5px 30px;
+    padding: 0.5px 30px;
     border-radius: 5px;
-    margin-left: 15px;
     border: 2.3px white solid ;
     transition: 0.35s;
 }
@@ -379,7 +411,51 @@ footer{
     margin-right: 20px;
     font-size: 20px;
 }
-
+@media (max-width:783px){
+    nav{
+        justify-content:flex-start;   
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    ul.links{
+        position: fixed;
+        width: 30%;
+        top: 60px;
+        height: 100vh;
+        text-align: center;
+        background: #2c2d30;
+        transition: all 0.5s;
+        left: -200%; /* hiding the ul to the left side*/
+        right: 70%;
+    }
+    nav ul li{
+        margin: 20px 0;
+        line-height: 30px;     
+    }
+    nav ul li a{
+        color: #ffffff;
+        font-size: 17px;
+    }
+    .button a{
+        padding: 0.5px 25px;
+        border-radius: 5px;
+        border: 2.3px white solid ;
+        transition: 0.35s;
+    }
+    a:hover,a.links{
+        background: none;
+        color: #F39F5A;
+        transition: all 0.5s;
+    }
+    #check:checked ~ ul{
+        left: 0; /* idk why but this important to make the list show when clicking the button*/
+    }
+}
 @media screen and (max-width: 1700px){
     .text{
         font-size: 16px;
@@ -466,9 +542,7 @@ footer{
     nav a{
         font-size: 16px;
     }
-    .logo{
-        display: none;
-    }
+    
     .button a{
         padding: 0px 10px;
     }
