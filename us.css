@@ -269,10 +269,12 @@ nav a:hover{
     margin-left: 20px;
 }
 .contaner-cards{
+    width: 100%;
     display: flex;
-    justify-self:center;
-    align-items:center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .img{
     margin-left: 15px;
