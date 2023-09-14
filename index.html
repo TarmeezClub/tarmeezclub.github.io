@@ -144,5 +144,32 @@
            
             </div>
         </footer>
+        <script>
+            let radiosSlider = document.querySelectorAll('input[type="radio"]');
+                   let time = 0
+                   let increase = 2000;//incresee to move more speed and decrease for slower move
+                    //first time
+                    let iterat = 0
+                   radiosSlider.forEach((r)=>{
+                          setTimeout(()=>{
+                            console.log(increase*iterat)
+                            r.checked =true
+                        },increase*iterat)
+                        iterat+=1
+                   })
+
+                    radiosSlider.forEach((r)=>
+                    {
+                        //for delay
+                        setTimeout(()=>{
+                            //for repeat it self
+                            setInterval(()=>{
+                               r.checked =true
+                            },increase*radiosSlider.length)
+                        },time)
+                        time+=increase;
+                    })
+         
+                </script>
 </body>
 </html>
