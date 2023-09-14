@@ -1,3 +1,7 @@
+:root{
+    --main-color:#0597f2;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -56,7 +60,7 @@ body{
 }
 
 .manual-btn{
-    border: 1px solid #0597f2;
+    border: 1px solid var(--main-color);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -71,7 +75,7 @@ body{
 }
 
 .manual-btn:hover{
-    background: #0597f2;
+    background: var(--main-color);
 }
 .frist{
     margin-left: -20%;
@@ -90,21 +94,21 @@ body{
     margin-left: -80%;
 }
 #radio1:checked ~ .frist label[for="radio1"]{
-    background: #0597f2;
+    background: var(--main-color);
 }
 #radio2:checked ~ .frist label[for="radio2"]{
-    background: #0597f2;
+    background: var(--main-color);
 }
 #radio3:checked ~ .frist label[for="radio3"]{
-    background: #0597f2;
+    background: var(--main-color);
 }
 #radio4:checked ~ .frist label[for="radio4"]{
-    background: #0597f2;
+    background: var(--main-color);
 }
 
 #images{
     width: 100%;
-    border-bottom: 2px #0597f2 solid;
+    border-bottom: 2px var(--main-color) solid;
 }
 /* [END] Slider*/
 /* pragraph */
@@ -113,7 +117,7 @@ body{
     flex-direction: column;
     /* height: 400px; */
     width: 100%;
-    border-bottom: 2px #0597f2 solid;
+    border-bottom: 2px var(--main-color) solid;
     color: white;
     text-align: center;
 }
@@ -137,7 +141,7 @@ body{
     bottom: 0;
     width: 150px;
     height: 2px;
-    background-color: #0597f2;
+    background-color: var(--main-color);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -145,7 +149,7 @@ body{
     font-weight: 400;
 }
 .content-text p span{
-    color: #0597f2;
+    color: var(--main-color);
     font-weight: bolder;
 }
 .content-text .left-c{
@@ -178,29 +182,74 @@ body{
     justify-content: center;
     align-items: center;
     color: white;
+    width: 100%;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
 }
+
 .background{
-    padding: 100px 0;
+    padding: 100px 10px;
     width: 100%;
     height: 100%;
-    height: 70vh;
     background-image: url("images/Background.png");
     background-size: cover;
     background-position: center;
 }
 #list h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
 }
-#list li{
-    font-size: 20px;
-    margin-bottom: 15px;
+#list h1::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 150px;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
 }
-.cont{
+#list ul{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* align-items: center; */
+    width: 100%;
 }
+#list li{
+    width: 40%;
+    font-size: 20px;
+    /* margin-bottom: 15px; */
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+    padding: 20px;
+    background-color: #88888844;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: 1s;
+}
+#list li:hover{
+    transform: translateY(-5%);
+}
+#list li p{
+    width: 50%;
+    text-align: right;
+    padding-right: 10px;
+}
+#list li i{
+    /* text-align: center; */
+    /* width: 20%; */
+    font-size: 80px;
+    color: var(--main-color);
+}
+
 .right{
     margin-left: 70px;
 }
@@ -212,7 +261,7 @@ body{
 }
 /* Footer */
 footer{
-    background-color: #0597f2;
+    background-color: var(--main-color);
     width: 100%;
     /* height: 250px; */
     display: flex;
@@ -352,32 +401,10 @@ footer .about-us p{
 @media screen and (max-width: 1024px) {
 
         /*footer style start*/
-        .tarmeez{
-            /* height: 15px; */
-        }
-        .imamu{
-            /* height: 50px; */
-            /* margin-bottom: 30px; */
-        }
-        .soical{
-            /* display: flex; */
-            /* flex-direction: column; */
-        }
-        .soical span{
-            /* font-family: "Open Sans"; */
-        }
-        
-        .instagram span{
-            /* margin-left: 5px; */
-        }
-
         .twitter , .instagram , .youtube{
             font-size: 15px;
             /* margin: 16px 0px; */
             margin-left: 10px;
-        }
-        .text{
-            /* bottom: 40px; */
         }
 }
 @media screen and (max-width: 500px) {
@@ -385,9 +412,6 @@ footer .about-us p{
     nav a{
         font-size: 16px;
     }
-    /* .logo{
-        display: none;
-    } */
     .button a{
         /* padding: 0px 10px; */
     }
@@ -437,8 +461,12 @@ footer .about-us p{
     /* end style middle*/
     /* start style list*/
     #list li{
+        width: 100%;
         font-size: 15px;
-        margin-right: 15px;
+        /* margin-right: 15px; */
+    }
+    #list li:hover{
+        transform: unset;
     }
     #list h1{
         margin-top: 0px;
