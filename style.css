@@ -23,9 +23,41 @@ body{
 
 /* [END] nav style*/
 /* Slider */
+#images{
+    width: 100%;
+    border-bottom: 2px var(--main-color) solid;
+    position: relative;
+}
+#images::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    
+    background-color: #000;
+
+}
+/* some shadow, maybe useful some day */
+#images::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(5,151,242,.5) 55%, rgba(5,41,242,1) 100%); */
+/* background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7    ) 19%, rgba(5,151,242,.5) 55%, rgba(5,41,242,1) 100%); */
+/* background: rgb(255,255,255); */
+/* background: radial-gradient(circle, rgba(255,255,255,0) 81%, rgba(255,255,255,1) 95%); */
+}
+
+
+
 .slider{
-    width: 800;
-    height: 500;
     overflow: hidden;
 }
 
@@ -68,6 +100,8 @@ body{
     margin-bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
+    /* opacity: .5; */
 }
 
 .manual-btn:not(:last-child){
@@ -106,10 +140,41 @@ body{
     background: var(--main-color);
 }
 
-#images{
+.slider-text{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-bottom: 2px var(--main-color) solid;
+    height: 100%;
+    /* background: rgb(15,18,40); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: 20;
 }
+.slider-text p{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    /* text-shadow: 2px 2px 10px #fff; */
+}
+.slider-text p::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    background-color: var(--main-color);
+    z-index: -1;
+    border-radius: 30px;
+
+}
+
 /* [END] Slider*/
 /* pragraph */
 #pragraph{
@@ -431,6 +496,9 @@ footer .about-us p{
     .slide img{
         height: 100%;
         width: 100%;
+    }
+    .slider-text p{
+        display: none;
     }
     /* end style slider image*/
     /* start style middle*/

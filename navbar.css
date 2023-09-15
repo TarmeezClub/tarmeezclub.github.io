@@ -10,7 +10,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 100;
 }
 nav{
     height: 60px;
