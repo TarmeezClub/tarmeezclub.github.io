@@ -1,3 +1,13 @@
+:root{
+    --main-color:#0597f2;
+    --second-color:#0071B2;
+    /* circle colors */
+    --cir-1:#05f2d7;
+    --cir-2:#05ddf2;
+    --cir-3:#05a9f2;
+    --cir-4:#0597f2;
+    --cir-5:#0569f2;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -9,7 +19,7 @@ body{
     color: white;
 }
 
-/* [END] nav style*/
+/* Introduction */
 .introductionWrapper{
     padding-top: 90px;
     display: flex;
@@ -17,11 +27,36 @@ body{
     align-items: center;
 }
 .introduction{
-    border: 5px solid #0599F2;
+    /* border: 5px solid var(--main-color); */
     border-radius: 20px;
     padding: 25px;
+    margin: 10px;
     text-align: center;
     width: fit-content;
+    position: relative;
+    background-color: #1A1A1A;
+}
+.introduction::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 102%;
+    height: 110%;
+    /* for browser not supporting linear gradiant */
+    background-color: var(--main-color);
+    /* background: linear-gradient(90deg, rgba(5,242,215,1) 18%, rgba(5,221,242,1) 32%, rgba(5,169,242,1) 50%, rgba(5,151,242,1) 75%, rgba(5,105,242,1) 95%); */
+    background: linear-gradient(90deg, rgba(5,242,215,1) 10%, rgba(5,169,242,1) 30%, rgba(5,105,242,1) 50%, rgba(5,169,242,1) 70%, rgba(5,242,215,1) 90%);
+    /* background: radial-gradient(circle, rgba(5,105,242,1) 0%, rgba(5,169,242,1) 34%, rgba(5,242,215,1) 58%, rgba(5,242,215,1) 83%); */
+    background-size: 400% 400%;
+    border-radius: 20px;
+    animation-name: gradient-move;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    
+    z-index: -1;
 }
 .introduction h3{
     font-size: 20px;
@@ -32,8 +67,9 @@ body{
     align-items: center;
     margin: 120px 0px;
 }
+/* Form */
 .forms-join{
-    background-color: #0599F2;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +77,7 @@ body{
     border-radius: 30px;
     padding: 18px 20px;
     max-width: 600px;
+    margin: 10px;
 }
 .name{
     font-weight: bold;
@@ -92,7 +129,7 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 .talk-about-your-self input[type = "text"], .info input[type = "text"]{
     color: white;
     height: 70px;
-    background-color: #0071B2;
+    background-color:var(--second-color) ;
     border: 0;
     border-radius: 3px;
     width: 100%;
@@ -100,19 +137,19 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 
 .forms-join input[type = "text"]{
     color: white;
-    background-color: #0071B2;
+    background-color: var(--second-color);
     border: 0;
     border-radius: 3px;
 }
 .forms-join input[type="number"]{
     color: white;
-    background-color: #0071B2;
+    background-color: var(--second-color);
     border: 0;
     border-radius: 3px;
 }
 .forms-join input[type="tel"]{
     color: white;
-    background-color: #0071B2;
+    background-color: var(--second-color);
     border: 0;
     border-radius: 3px;
 }
@@ -199,9 +236,10 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     margin-left: 20px;
     border: 0;
     border-radius: 3px;
-    background-color: #0071B2;
+    background-color: var(--second-color);
     color: white;
-    border: 0.5px solid #0071B2;
+    border: 0.5px solid var(--second-color);
+    cursor: pointer;
 }
 .reset{
     font-family: "Noto kufi Arabic";
@@ -213,6 +251,7 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     background-color: #cc4f01;
     border: 0.5px solid #cc4f01;
     color: white;
+    cursor: pointer;
 }
 .send:hover{
     background-color: #0068a4;
@@ -225,288 +264,119 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 .phone-number ::placeholder{
     color: rgba(255, 255, 255, 0.631);
 }
+/* Footer */
 footer{
-    background-color: #0597f2;
+    background-color: var(--main-color);
     width: 100%;
-    height: 250px;
+    /* height: 250px; */
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 100px;
+    padding: 40px 0;
+    
 }
 .logos{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
     margin-left: 10px;
+    height: 100%;
+    /* background-color: red; */
 }
 
-.line{
-    width: 2px;
-    height: 70px;
-    background-color: white;
-    margin: 0px 20px;
-    margin-top: auto;
+footer .about-us{
+    color: white;
 }
-.lines-between{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    position: absolute;
-    left: 320px;
+footer .about-us h4{
+    margin-bottom: 15px;
+    font-size: 20px;
 }
+footer .about-us p{
+    margin: 0;
+}
+
 .soical{
     color: white;
     display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
     direction: ltr;
-    position: absolute;
-    left: 400px;
     font-family: "Open Sans";
+    text-decoration: none;
+    
+}
+.soical a{
+    color: #e7e7e7;
+    transition: .3s;
+}
+.soical a:hover{
+    color: #1A1A1A;
 }
 .twitter , .instagram , .youtube{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 25px;
 }
 .fa-brands{
     font-size: 30px;
 }
-.lines-between2{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    position: absolute;
-    left: 1132px;
+
+
+.links-footer{
+    /* position: absolute; */
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+
+    text-align:right;
+    /* padding: 0; */
+}
+.links-footer h4{
+    margin: 0px;
+    /* margin-bottom: 20px; */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.links-footer .links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+
+    /* padding-top: 20px; */
+    /* margin-top: 20px; */
 }
 .links-footer a{
     text-decoration: none;
-    color: white;
-    margin: 5px 0px;
-}
-.links-footer{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    left: 1200px;
-    text-align: center;
-
-
-}
-.links-footer h1{
-    margin: 0px;
-}
-.links-footer a{
+    color: #e7e7e7;
+    text-align: right;
+    /* margin: 5px 0px; */
     transition: 0.2s;
 }
 .links-footer a:hover{
     color: #1A1A1A;
 }
-.lines-between3{
-    width: 3px;
-    height: 140px;
-    background-color: white;
-    position: absolute;
-    left: 1400px;
-}
+
 .text{
-    position: absolute;
-    color: white;
     display: flex;
     flex-direction: column;
     text-align: start;
-    margin-right: 20px;
+    color: #e7e7e7;
+    /* margin-right: 20px; */
     font-size: 20px;
 }
-@media screen and (max-width: 1700px){
-    .text{
-        font-size: 16px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    /*footer style start*/
-    footer{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 800px;
-    }
-    .logos{
-        display: flex;
-        flex-direction: column;
-        top: 10px;
-        position: absolute;
-    }
-    .line{
-        display: none;
-    }
-    .tarmeez{
-        height: 15px;
-    }
-    .imamu{
-        height: 50px;
-        margin-bottom: 30px;
-    }
-    .links-footer{
-        position: absolute;
-        top: 400px;
-        left: 45%;
-    }
-    .soical{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 160px;
-        left: 41%;
-    }
-    .soical span{
-        font-family: "Open Sans";
-    }
-    
-    .instagram span{
-        margin-left: 5px;
-    }
-    .lines-between{
-        width: 200px;
-        height: 3px;
-        top: 140px;
-        left: 41%;
-        position: absolute;
-    }
-    .lines-between2{
-        width: 200px;
-        height: 3px;
-        top: 370px;
-        left: 41%;
-        position: absolute;
-    }
-    .lines-between3{
-        width: 200px;
-        height: 3px;
-        top: 640px;
-        left: 41%;
-        position: absolute;
-    }
-    .twitter , .instagram , .youtube{
-        font-size: 15px;
-        margin: 16px 0px;
-        margin-left: 30px;
-    }
-    .text{
-        position: absolute;
-        bottom: 40px;
-        
-    }
-}
-@media screen and (max-width: 428px) {
-    /* nav style*/
-    nav a{
-        font-size: 16px;
-    }
-    .button a{
-        padding: 0px 10px;
-    }
-    /* nav style end*/
-    /* start style slider image*/
+.text h4{
+    color: white;
+    font-size: 20px;
+    margin: 0;
 
-    .slide img{
-        height: 100%;
-        width: 100%;
-    }
-    /* end style slider image*/
-    /* start style middle*/
-
-    #pragraph{
-        padding-bottom: 80px;
-        margin: 0px;
-    }
-    .content-text{
-        margin-top: 0px;
-    }
-    /* end style middle*/
-    /* start style list*/
-    #list li{
-        font-size: 15px;
-        margin-right: 15px;
-    }
-    #list h1{
-        margin-top: 0px;
-    }
-    /* end style list*/
-    /*footer style start*/
-    footer{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 800px;
-    }
-    .logos{
-        display: flex;
-        flex-direction: column;
-        top: 10px;
-        position: absolute;
-    }
-    .line{
-        display: none;
-    }
-    .tarmeez{
-        height: 15px;
-    }
-    .imamu{
-        height: 50px;
-        margin-bottom: 30px;
-    }
-    .links-footer{
-        position: absolute;
-        top: 400px;
-        left: 33%;
-    }
-    .soical{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 160px;
-        left: 25%;
-
-    }
-    .soical span{
-        font-family: "Open Sans";
-    }
-    
-    .instagram span{
-        margin-left: 5px;
-    }
-    .lines-between{
-        width: 200px;
-        height: 3px;
-        top: 140px;
-        left: 28%;
-        position: absolute;
-    }
-    .lines-between2{
-        width: 200px;
-        height: 3px;
-        top: 370px;
-        left: 28%;
-        position: absolute;
-    }
-    .lines-between3{
-        width: 200px;
-        height: 3px;
-        top: 640px;
-        left: 28%;
-        position: absolute;
-    }
-    .twitter , .instagram , .youtube{
-        font-size: 15px;
-        margin: 16px 0px;
-        margin-left: 30px;
-    }
-    .text{
-        position: absolute;
-        bottom: 40px;
-        
-    }
-
-    /*footer style end*/
 }
 @media screen and (max-width: 1700px){
     .text{
@@ -515,80 +385,13 @@ footer{
 }
 @media screen and (max-width: 1024px) {
     /*footer style start*/
-    footer{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 800px;
-    }
-    .logos{
-        display: flex;
-        flex-direction: column;
-        top: 10px;
-        position: absolute;
-    }
-    .line{
-        display: none;
-    }
-    .tarmeez{
-        height: 15px;
-    }
-    .imamu{
-        height: 50px;
-        margin-bottom: 30px;
-    }
-    .links-footer{
-        position: absolute;
-        top: 400px;
-        left: 45%;
-    }
-    .soical{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 160px;
-        left: 41%;
-    }
-    .soical span{
-        font-family: "Open Sans";
-    }
-    
-    .instagram span{
-        margin-left: 5px;
-    }
-    .lines-between{
-        width: 200px;
-        height: 3px;
-        top: 140px;
-        left: 41%;
-        position: absolute;
-    }
-    .lines-between2{
-        width: 200px;
-        height: 3px;
-        top: 370px;
-        left: 41%;
-        position: absolute;
-    }
-    .lines-between3{
-        width: 200px;
-        height: 3px;
-        top: 640px;
-        left: 41%;
-        position: absolute;
-    }
     .twitter , .instagram , .youtube{
         font-size: 15px;
-        margin: 16px 0px;
-        margin-left: 30px;
-    }
-    .text{
-        position: absolute;
-        bottom: 40px;
-        
+        /* margin: 16px 0px; */
+        margin-left: 10px;
     }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
     /* nav style*/
     nav a{
         font-size: 16px;
@@ -597,109 +400,97 @@ footer{
         padding: 0px 10px;
     }
     /* nav style end*/
-    /* start style slider image*/
-
-    .slide img{
-        height: 100%;
-        width: 100%;
-    }
-    /* end style slider image*/
     /* start style middle*/
-
-    #pragraph{
+    /* no paragraph :) */
+    /* #pragraph{
         padding-bottom: 80px;
         margin: 0px;
-    }
-    .content-text{
-        margin-top: 0px;
-    }
-    /* end style middle*/
-    /* start style list*/
-    #list li{
-        font-size: 15px;
-        margin-right: 15px;
-    }
-    #list h1{
-        margin-top: 0px;
-    }
-    /* end style list*/
-    /*footer style start*/
-    footer{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 800px;
-    }
-    .logos{
-        display: flex;
-        flex-direction: column;
-        top: 10px;
-        position: absolute;
-    }
-    .line{
-        display: none;
-    }
-    .tarmeez{
-        height: 15px;
-    }
-    .imamu{
-        height: 50px;
-        margin-bottom: 30px;
-    }
-    .links-footer{
-        position: absolute;
-        top: 400px;
-        left: 33%;
-    }
-    .soical{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 160px;
-        left: 25%;
+    } */
 
-    }
-    .soical span{
-        font-family: "Open Sans";
-    }
-    
-    .instagram span{
-        margin-left: 5px;
-    }
-    .lines-between{
-        width: 200px;
-        height: 3px;
-        top: 140px;
-        left: 28%;
-        position: absolute;
-    }
-    .lines-between2{
-        width: 200px;
-        height: 3px;
-        top: 370px;
-        left: 28%;
-        position: absolute;
-    }
-    .lines-between3{
-        width: 200px;
-        height: 3px;
-        top: 640px;
-        left: 28%;
-        position: absolute;
-    }
-    .twitter , .instagram , .youtube{
-        font-size: 15px;
-        margin: 16px 0px;
-        margin-left: 30px;
-    }
-    .text{
-        position: absolute;
-        bottom: 40px; 
-    }
-    .introduction h3{
-        font-size: 13px;
-    }
+ /*footer style start*/
+ footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 100px;
+    /* padding: 10px; */
 
+    /* height: 800px; */
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* position: absolute; */
+}
+
+.tarmeez{
+    height: 15px;
+}
+.imamu{
+    height: 50px;
+    margin-bottom: 30px;
+}
+.links-footer{
+    /* position: absolute; */
+    justify-content: center;
+    flex-direction: column;
+
+}
+.links-footer .links {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     
-    /*footer style end*/
+}
+.links-footer .links a{
+    text-align: center;
+}
+.soical{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* position: absolute; */
+}
+.soical span{
+    font-family: "Open Sans";
+}
+.instagram span{
+    margin-left: 5px;
+}
+.twitter , .instagram , .youtube{
+    font-size: 15px;
+    margin: 16px 0px;
+    margin-left: 30px;
+}
+.text{
+    /* position: absolute; */
+    bottom: 40px;
+    
+}
+.about-us{
+    justify-content: center;
+    align-items: center;
+}
+/*footer style end*/
+
+}
+
+
+@keyframes gradient-move {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
