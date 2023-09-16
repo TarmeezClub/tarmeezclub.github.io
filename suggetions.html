@@ -60,8 +60,8 @@
     <section id="sign">
     <form class="forms-join" action="https://sheetdb.io/api/v1/2ugwqmef4jmdw" method="post" id="sheetdb-form">
         <div class="name">
-            <label for="name">أسم المبدع</label>
             <input type="text" name="data[name]" id="name" required>
+            <label for="name">أسم المبدع</label>
         </div>
         <!-- <div class="major">
             <label for="major">تخصصك الجامعي ؟</label>
@@ -72,31 +72,33 @@
             <input type="number" name="data[level]" id="level" min="1" max="10" required>
         </div> -->
         <div class="ideaName">
-            <label for="ideaName">عنوان الفكرة ؟</label>
             <input type="text" name="data[IdeaTitle]" id="ideaName" required>
+            <label for="ideaName">عنوان الفكرة ؟</label>
+        </div>
+    
+        <div class="target">
+            <input type="text" name="data[Target]" id="target" required>
+            <label for="target">الفئة المستهدفة ؟</label>
         </div>
         <div class="ideaDetails">
-            <label for="ideaDetails">تفاصيل الفكرة او المشكلة</label>
             <input type="text" name="data[IdeaDetails]" id="ideaDetails" required>
-        </div>
-        <div class="target">
-            <label for="target">الفئة المستهدفة ؟</label>
-            <input type="text" name="data[Target]" id="target" required>
+            <!-- <textarea rows="4" cols="50" name="comment" form="sign"  name="data[IdeaDetails]"  id="ideaDetails" required></textarea> -->
+            <label for="ideaDetails" >تفاصيل الفكرة او المشكلة</label>
         </div>
 
         <div class="platform">
-            <label for="platform">المنصات المستهدفة : </label>
+            <label for="platform">المنصات المستهدفة </label>
             <div class="IOS">
-                <label for="IOS">IOS</label>
                 <input type="checkbox" name="data[iOS]" id="IOS">
+                <label for="IOS">IOS</label>
             </div>
             <div class="Android">
-                <label for="Android">Android</label>
                 <input type="checkbox" name="data[Android]" id="Android">
+                <label for="Android">Android</label>
             </div>
             <div class="Web">
-                <label for="Web">Web</label>
                 <input type="checkbox" name="data[Web]" id="Web">
+                <label for="Web">Web</label>
             </div>
         </div>
 
@@ -147,8 +149,8 @@
             <input type="text" name="data[info]" id="info" required>
         </div> -->
         <div class="phoneOrEmail">
-            <label for="phoneOrEmail">رقم الهاتف</label>
             <input type="text" name="data[Phone]" id="phoneOrEmail" required>
+            <label for="phoneOrEmail">رقم الهاتف</label>
         </div>
         <!-- <div class="sugg">
             <label for="sugg">أي اضافات او اقتراحات للنادي ؟</label>
@@ -156,9 +158,10 @@
             <input type="text" name="data[sugg]" id="sugg">
         </div> -->
         <div class="button-send">
-            <input class="send" type="submit" value="إرسال">
-            <input class="reset" type="reset" value=" مسح">
+            <input class="reset" type="reset" value="مسح">
+            <button class="send" type="submit"><i class="fa-solid fa-chevron-down fa-rotate-90"></i>إرسال</button>
         </div>
+        
     </form>
 </section>
 <footer>

@@ -70,14 +70,18 @@ body{
 /* Form */
 .forms-join{
     background-color: var(--main-color);
+    background-color: #1A1A1A;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     border-radius: 30px;
-    padding: 18px 20px;
+    padding: 50px 20px;
     max-width: 600px;
-    margin: 10px;
+    margin: 20px;
 }
 .name{
     font-weight: bold;
@@ -113,14 +117,16 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     height: 30px;
 }
 .ideaDetails input[type = "text"], .info input[type = "text"]{
-    color: white;
     height: 70px;
-    background-color: #0071B2;
-    border: 0;
-    border-radius: 3px;
-    width: 100%;
+    /* color: white; */
+    /* background-color: #0071B2; */
+    /* background-color: none; */
+    /* border: unset; */
+    /* border-radius: 3px; */
+    /* width: 100%; */
 }
-.talk-about-your-self ::placeholder{
+/* Comminted in HTML */
+/* .talk-about-your-self ::placeholder{
     position: absolute;
     top: 10px;
     font-size: 14px;
@@ -133,63 +139,107 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     border: 0;
     border-radius: 3px;
     width: 100%;
+} */
+
+.forms-join input{
+    color: white;
+    /* color:; */
+    font-size: 18px;
+    /* background-color: var(--second-color); */
+    background-color: unset;
+    border: 0;
+    border-radius: 3px;
+    border-bottom: 2px solid #fff ;
+    cursor: pointer;
+    outline: none;
 }
 
-.forms-join input[type = "text"]{
-    color: white;
-    background-color: var(--second-color);
-    border: 0;
-    border-radius: 3px;
+.forms-join input[type="text"] + label,
+.forms-join input[type="number"] + label,
+.forms-join input[type="phoneOrEmail"] + label{
+    /* background-color: red; */
+    position: absolute;
+    top: -5px;
+    right: 0;
+    cursor: pointer;
+    transition: .3s;
+    color: #ddd;
 }
-.forms-join input[type="number"]{
-    color: white;
-    background-color: var(--second-color);
-    border: 0;
-    border-radius: 3px;
+.forms-join input:focus,
+.forms-join input:valid{
+    border-color: var(--main-color);
 }
-.forms-join input[type="tel"]{
+.forms-join input:focus + label,
+.forms-join input:valid + label{
+    top: -25px;
+    font-size: 15px;
     color: white;
-    background-color: var(--second-color);
-    border: 0;
-    border-radius: 3px;
+    color: var(--main-color);
 }
-.name , .level , .major , .ideaName , .ideaDetails, .target, .talk-about-your-self, .email, .phoneOrEmail, .phone-number{
+/* .forms-join input[] */
+/* .name , .level , .major , .ideaName , .ideaDetails, .target, .talk-about-your-self, .email, .phoneOrEmail, .phone-number{ */
+.forms-join > div{
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
-.platform{
+.forms-join .platform{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
 }
-.platform label{
+.platform > label{
     display: flex;
     justify-content: start;
+    color: #ddd;
+    /* width: 60%; */
+    /* background-color: red; */
 }
-.experince{
+
+
+/* .experince{
     display: flex;
-}
-.experince label{
+} 
+ .experince label{
     display: flex;
     justify-content: start;
+} */
+.forms-join input[type="checkbox"]{
+    /* color: white; */
+    display: none;
+}
+.forms-join input[type="checkbox"] + label{
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.forms-join input[type="checkbox"]:checked + label{
+    background-color: var(--second-color);
+    border-radius: 50px;
 }
 .IOS, .Android, .Web{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
 }
-.python , .java-script , .java , .html-css, .swift , .sql , .dart , .php{
+/* .python , .java-script , .java , .html-css, .swift , .sql , .dart , .php{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
-}
+} */
 .down{
     display: flex;
 }
-.info , .platform , .experince{
+/* .info , .platform , .experince{
     margin-top: 30px;
 }
 .info label , p{
@@ -206,8 +256,8 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 }
 .info{
     width: 100%;
-}
-.sugg{
+} */
+/* .sugg{
     width: 100%;
 }
 .sugg input[type="text"]{
@@ -219,47 +269,57 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     font-size: 12px;
     font-weight: normal;
     width: 80%;
-}
+} */
 
-.button-send{
-    width: 100%;
+.forms-join .button-send{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    gap: 20px;
+    /* background-color: red; */
 
 }
-.send{
+.forms-join  .send{
     font-family: "Noto kufi Arabic";
     font-size: 16px;
-    width: 120px;
-    margin-left: 20px;
+    /* width: 120px; */
+    width: 30%;
+    /* margin-left: 20px; */
     border: 0;
     border-radius: 3px;
+    border-radius: 20px;
     background-color: var(--second-color);
     color: white;
     border: 0.5px solid var(--second-color);
     cursor: pointer;
+    padding: 10px;
 }
-.reset{
+.forms-join  .reset{
     font-family: "Noto kufi Arabic";
     font-size: 16px;
-    width: 120px;
-    margin-left: 20px;
+    /* width: 120px; */
+    width: 30%;
+    /* margin-left: 20px; */
     border: 0;
     border-radius: 3px;
-    background-color: #cc4f01;
-    border: 0.5px solid #cc4f01;
+    /* border-radius: 10px;/ */
+    /* background-color: #cc4f01; */
+    /* border: 0.5px solid #cc4f01; */
     color: white;
+    text-decoration:underline;
     cursor: pointer;
+    /* padding: 10px; */
 }
 .send:hover{
     background-color: #0068a4;
     border: 0.5px solid white;
 }
 .reset:hover{
-    background-color: #cc4f01;
-    border: 0.5px solid white;
+    /* background-color: #cc4f01; */
+    /* border: 0.5px solid white; */
 }
 .phone-number ::placeholder{
     color: rgba(255, 255, 255, 0.631);
