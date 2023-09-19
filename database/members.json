@@ -10,13 +10,38 @@
 
     "قسم البرمجة والتطوير":[
         {
+            "name":"صالح نواف البطي",
+            "description":"مطور تطبيقات iOS",
+            "works":["java","py","swift"]
+        },
+        {
+            "name":"عمر سعد بن شعيل",
+            "description":"مطور مواقع",
+            "works":["java","py","js"]
+        },
+        {
+            "name":"محمد صالح الحواس",
+            "description":"مطور مواقع",
+            "works":["java","py", "js"]
+        },
+        {
+            "name":"خزامى السنان",
+            "description":"مطورة مواقع",
+            "works":["java","py"]
+        },
+        {
+            "name":"هاجر ناشي",
+            "description":"مطور تطبيقات iOS",
+            "works":["swift"]
+        },
+        {
             "name":"راكان الخليفة",
             "description":"مطور مواقع",
             "works":["py","js"]
         },
         {
             "name":"طيف الميزاني",
-            "description":"مطورة Back-end",
+            "description":"مطورة مواقع",
             "works":["py","java"]
         },
         {
@@ -43,9 +68,19 @@
             "works":["sw","java"]
         },
         {
-            "name":"صالح نواف البطي",
+            "name":"سلمى العبدالكريم",
+            "description":"مصمم جرافيك",
+            "works":["graphic"]
+        },
+        {
+            "name":"ساره البلوي",
             "description":"مصمم",
-            "works":["graphic","sw"]
+            "works":["graphic","py","sw"]
+        },
+        {
+            "name":"بتلاء نايف الجبرين",
+            "description":"كاتبة محتوى",
+            "works":["sw"]
         }
     ]
 }
