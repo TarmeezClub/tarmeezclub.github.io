@@ -38,16 +38,6 @@
             "name":"راكان الخليفة",
             "description":"مطور مواقع",
             "works":["py","js"]
-        },
-        {
-            "name":"طيف الميزاني",
-            "description":"مطورة مواقع",
-            "works":["py","java"]
-        },
-        {
-            "name":"عبدالله الحميد",
-            "description":"مطور تطبيقات IOS",
-            "works":["swift","java"]
         }
     ],
 
@@ -56,11 +46,6 @@
             "name":"منيرة البريدي",
             "description":"كاتبة محتوى",
             "works":["camera","editoer"]
-        },
-        {
-            "name":"اسيل آل عازب",
-            "description":"مصورة",
-            "works":["camera","cg"]
         },
         {
             "name":"أحمد الغامدي",
