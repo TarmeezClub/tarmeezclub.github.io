@@ -28,6 +28,7 @@ body{
     width: 100%;
     border-bottom: 2px var(--main-color) solid;
     position: relative;
+    overflow: hidden;
 }
 #images::after{
     content: '';
@@ -37,7 +38,6 @@ body{
     width: 100%;
     height: 100%;
     opacity: .4;
-    
     background-color: #000;
 
 }
@@ -55,6 +55,32 @@ body{
 /* background: rgb(255,255,255); */
 /* background: radial-gradient(circle, rgba(255,255,255,0) 81%, rgba(255,255,255,1) 95%); */
 }
+/* #images .cir-1{
+    position: absolute;
+    top: 80%;
+    right: 0%;
+    width: 20%;
+    height: 50%;
+    background-color: var(--main-color);
+    z-index: 0;
+    display: block;
+    border-radius: 100%;
+    filter: blur(100px);
+
+}
+#images .cir-2{
+content: '';
+position: absolute;
+top: 80%;
+left: 0%;
+width: 20%;
+height: 50%;
+background-color: var(--main-color);
+z-index: 0;
+display: block;
+border-radius: 100%;
+filter: blur(100px);
+} */
 
 
 
@@ -196,7 +222,9 @@ body{
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    padding: 100px;
 }
+
 .content-text h1 {
     position: relative;
     padding-bottom: 20px;
@@ -213,6 +241,24 @@ body{
 }
 .content-text h1{
     font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content-text h2{
+    position: relative;
+}
+.content-text h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1A1A1A;
+    transition: .3s;
+}
+.content-text h2.show::before{
+    width: 0;
 }
 .content-text p span{
     color: var(--main-color);

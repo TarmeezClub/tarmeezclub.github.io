@@ -79,7 +79,8 @@
                     <img src="images-slider/10.jpeg" alt="">
                 </div>
             </div>
-            
+        <!-- <span class="cir-1"></span>
+        <span class="cir-2"></span> -->
         </div>
         <div class="slider-text">
             <p>المكان المناسب لاطلاق<br> عنان افكارك وابداعك<br></p>
@@ -90,6 +91,8 @@
             <h1>ترميز..</h1>
             <h2>منطقة للمبدعين والشغوفين فقط.!
             <div>مكانك لتبدع وتظهر مهاراتك..</div></h2>
+            <span  class="right-c">\></span>
+            <span class="left-c"><</span>
         </div>
     </section>
     <section id="list">
@@ -149,32 +152,6 @@
            
             </div>
         </footer>
-        <script>
-            let radiosSlider = document.querySelectorAll('input[type="radio"]');
-                   let time = 0
-                   let increase = 2000;//incresee to move more speed and decrease for slower move
-                    //first time
-                    let iterat = 0
-                   radiosSlider.forEach((r)=>{
-                          setTimeout(()=>{
-                            console.log(increase*iterat)
-                            r.checked =true
-                        },increase*iterat)
-                        iterat+=1
-                   })
-
-                    radiosSlider.forEach((r)=>
-                    {
-                        //for delay
-                        setTimeout(()=>{
-                            //for repeat it self
-                            setInterval(()=>{
-                               r.checked =true
-                            },increase*radiosSlider.length)
-                        },time)
-                        time+=increase;
-                    })
-         
-                </script>
+        <script src="./js/index.js"></script>
 </body>
 </html>
