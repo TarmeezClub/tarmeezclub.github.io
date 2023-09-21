@@ -106,38 +106,6 @@ filter: blur(100px);
     width: 100%;
     height: 100%;
 }
-
-.nav-manual{
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 180px;
-    bottom: 0;
-    width: 100%;
-    
-}
-
-.manual-btn{
-    border: 1px solid var(--main-color);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-    margin-bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    /* opacity: .5; */
-}
-
-.manual-btn:not(:last-child){
-    margin-left: 40px;
-}
-
-.manual-btn:hover{
-    background: var(--main-color);
-}
 .frist{
     margin-left: -20%;
     position: relative;
@@ -154,18 +122,75 @@ filter: blur(100px);
 #radio4:checked ~ .frist{
     margin-left: -80%;
 }
-#radio1:checked ~ .frist label[for="radio1"]{
+
+.nav-manual{
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.manual-btn{
+    border: 1px solid var(--main-color);
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-bottom: 20px;
+    left: 50%;
+    height: fit-content;
+    transform: translateX(-50%);
+    z-index: 10;
+    /* opacity: .5; */
+}
+
+.manual-btn:not(:last-child){
+    margin-left: 40px;
+}
+
+.manual-btn:hover{
     background: var(--main-color);
 }
-#radio2:checked ~ .frist label[for="radio2"]{
-    background: var(--main-color);
+#radio1 ~ .frist label[for="radio1"]::before,
+#radio2 ~ .frist label[for="radio2"]::before,
+#radio3 ~ .frist label[for="radio3"]::before,
+#radio4 ~ .frist label[for="radio4"]::before{
+    position: absolute;
+    content: '';
+    background-color: var(--main-color);
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+
 }
-#radio3:checked ~ .frist label[for="radio3"]{
-    background: var(--main-color);
-}
+
+
+#radio1:checked ~ .frist label[for="radio1"],
+#radio2:checked ~ .frist label[for="radio2"],
+#radio3:checked ~ .frist label[for="radio3"],
 #radio4:checked ~ .frist label[for="radio4"]{
-    background: var(--main-color);
+    /* background: var(--main-color); */
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    /* transform: translateY(10%); */
 }
+#radio1:checked ~ .frist label[for="radio1"]::before,
+#radio2:checked ~ .frist label[for="radio2"]::before,
+#radio3:checked ~ .frist label[for="radio3"]::before,
+#radio4:checked ~ .frist label[for="radio4"]::before{
+    background-color: var(--main-color);
+    width: 150%;
+    height: 150%;
+}
+
 
 .slider-text{
     position: absolute;
@@ -187,7 +212,9 @@ filter: blur(100px);
     text-align: center;
     position: relative;
     /* text-shadow: 2px 2px 10px #fff; */
+    animation: toleft .3s ease-out forwards;
 }
+
 .slider-text p::before{
     content: '';
     position: absolute;
@@ -199,7 +226,8 @@ filter: blur(100px);
     background-color: var(--main-color);
     z-index: -1;
     border-radius: 30px;
-
+    animation: toright .3s ease-out forwards;
+    
 }
 
 /* [END] Slider*/
@@ -673,4 +701,18 @@ footer .about-us p{
     /*footer style end*/
 
 
+}
+@keyframes toleft{
+    0%{
+        transform: translateX(50%);
+    }100%{
+        transform: translateX(0);
+    }
+}
+@keyframes toright{
+    0%{
+        transform: translateX(-100%);
+    }100%{
+        transform: translate(-50%,-50%);
+    }
 }
