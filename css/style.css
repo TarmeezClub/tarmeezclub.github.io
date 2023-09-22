@@ -374,6 +374,7 @@ filter: blur(100px);
     flex-wrap: wrap;
     gap: 10px;
     transition: 1s;
+ 
 }
 #list li:hover{
     transform: translateY(-5%);
@@ -388,6 +389,7 @@ filter: blur(100px);
     /* width: 20%; */
     font-size: 80px;
     color: var(--main-color);
+    text-shadow: 2px 2px 0 #fff;
 }
 
 .right{
