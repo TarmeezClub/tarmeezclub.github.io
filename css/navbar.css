@@ -15,7 +15,9 @@
 nav{
     height: 60px;
     width: 100%;
-    background-color: #0599F2;
+    /* background-color: #0599F2; */
+    background-color: #1A1A1A;
+    border-bottom:2px solid #0597f2;
 }
 nav ul{
     display: flex;
@@ -36,8 +38,13 @@ nav ul li a{
     font-size: 20px;
     font-weight: 600;
 }
+nav ul li a.active{
+    color: #0597f2;
+    font-weight: 900;
+}
 a.links,a:hover{
-    color: #1A1A1A;
+    color: #0597f2;
+    /* color: #1A1A1A; */
     transition: .5s;
 }
 .logo{
@@ -184,3 +191,4 @@ a.links,a:hover{
 .ham1.links .bottom {
     stroke-dashoffset: -138px;
 }
+
