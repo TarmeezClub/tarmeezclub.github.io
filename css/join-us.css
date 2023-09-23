@@ -149,8 +149,11 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     background-color: unset;
     border: 0;
     border-radius: 3px;
-    border-bottom: 2px solid #fff ;
-    cursor: pointer;
+    /* border-bottom: 2px solid #fff ; */
+    border: 2px solid #555 ;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: auto;
     outline: none;
 }
 
@@ -159,11 +162,13 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 .forms-join input[type="phoneOrEmail"] + label{
     /* background-color: red; */
     position: absolute;
-    top: -5px;
-    right: 0;
-    cursor: pointer;
+    top: 5px;
+    right: 10px;
+    padding: 0 5px;
+    cursor:text;
     transition: .3s;
     color: #ddd;
+
 }
 .forms-join input:focus,
 .forms-join input:valid{
@@ -171,10 +176,11 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
 }
 .forms-join input:focus + label,
 .forms-join input:valid + label{
-    top: -25px;
+    top: -15px;
     font-size: 15px;
-    color: white;
+    /* color: white; */
     color: var(--main-color);
+    background-color: #1A1A1A;
 }
 /* .forms-join input[] */
 /* .name , .level , .major , .ideaName , .ideaDetails, .target, .talk-about-your-self, .email, .phoneOrEmail, .phone-number{ */
@@ -193,10 +199,11 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     margin-top: 20px;
     text-align: center;
 }
-.platform > label{
+.platform >  label{
     display: flex;
     justify-content: start;
-    color: #ddd;
+    color: #fff;
+    /* position: relative; */
     /* width: 60%; */
     /* background-color: red; */
 }
@@ -214,20 +221,45 @@ label .major , .level , .ideaName, .ideaDetails, .target, .talk-about-your-self,
     display: none;
 }
 .forms-join input[type="checkbox"] + label{
+    display: flex;
+    position: relative;
     color: white;
     padding: 5px 15px;
     cursor: pointer;
     transition: .3s;
+    top: 0;
+  
 }
 .forms-join input[type="checkbox"]:checked + label{
+    
     background-color: var(--second-color);
     border-radius: 50px;
 }
+/* .forms-join input[type="checkbox"] + label div{
+    z-index: 10;
+} */
+
+.forms-join input[type="checkbox"] + label i{
+    /* display: inline-block; */
+    position: absolute;
+    /* color: ; */
+    opacity: .3;
+    content: '';
+    /* z-index: 1; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
 .IOS, .Android, .Web{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+}
+.Web i{
+    font-size: 25px;
 }
 /* .python , .java-script , .java , .html-css, .swift , .sql , .dart , .php{
     display: flex;
