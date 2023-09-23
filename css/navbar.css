@@ -19,13 +19,12 @@ nav{
     background-color: #1A1A1A;
     border-bottom:2px solid #0597f2;
 }
+
 nav ul{
     display: flex;
-    position: absolute;
-    margin: 0 auto;
+
     justify-content: flex-end;
-    left: 0;
-    right: 0;
+ 
     font-weight: 400;
 }
 nav ul li{
@@ -82,14 +81,22 @@ a.links,a:hover{
     color: white;
     border: 2.3px white solid ;
 }
+nav a img{
+    cursor: pointer;
+}
 @media (max-width:783px){
     nav{
+
         justify-content:flex-start;   
     }
     .checkbtn{
         display: block;
     }
     nav ul{
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -130,6 +137,7 @@ a.links,a:hover{
 }
 @media screen and (max-width: 500px) {
     /* nav style*/
+
     nav a{
         font-size: 16px;
     }
