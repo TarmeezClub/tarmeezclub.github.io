@@ -283,10 +283,13 @@ filter: blur(100px);
     height: 100%;
     width: 100%;
     background-color: #1A1A1A;
-    transition: .3s;
+    /* border-right: 2px solid var(--main-color); */
+    transition:  all 1s;
+    /* transition: border-right 3s; */
 }
 .content-text h2.show::before{
     width: 0;
+    /* border-right: 2px solid transparent; */
 }
 .content-text p span{
     color: var(--main-color);
@@ -294,7 +297,13 @@ filter: blur(100px);
 }
 .content-text .left-c{
     position: absolute;
+    width: 50%;
+    height: 100%;
     left: 5%;
+    top: 10%;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    /* background-color: red; */
     transform: rotateY(180deg);
     /* transform: rotateZ(90deg); */
     font-size: 300px;
@@ -302,20 +311,75 @@ filter: blur(100px);
     margin: 0;
     color: white;
     z-index: -1;
-    opacity: .05;
+    text-shadow: 0 0 10px #fff;
+    /* opacity: .05; */
+
 }
+.content-text .left-c .left-c-1{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 300px;
+    text-shadow: 0 0 5px #000;
+}
+.content-text .left-c .left-c-2{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(90deg, rgba(5,242,215,1) 10%, rgba(5,169,242,1) 30%, rgba(5,105,242,1) 50%, rgba(5,169,242,1) 70%, rgba(5,242,215,1) 90%);
+    /* background-image: url('/images/Imam_Logo_white.png'); */
+    background-size: cover;
+    background-clip:  text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 350px;
+    z-index: 5;
+}
+
 .content-text .right-c{
     z-index: -1;
     position: absolute;
+    width: 50%;
+    height: 100%;
     right: 5%;
+    top: 10%;
     transform: rotateY(180deg);
     /* transform: rotateZ(270deg); */
     font-size: 300px;
     padding: 0;
     margin: 0;
     color: white;
-    opacity: .05;
+    text-shadow: 0 0 10px #fff;
+    /* color: #1A1A1A; */
+    /* opacity: .05; */
 }
+.content-text .right-c .right-c-1{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 300px;
+    text-shadow: 0 0 5px #000;
+}
+.content-text .right-c .right-c-2{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(90deg, rgba(5,242,215,1) 10%, rgba(5,169,242,1) 30%, rgba(5,105,242,1) 50%, rgba(5,169,242,1) 70%, rgba(5,242,215,1) 90%);
+    /* background-image: url('/images/Imam_Logo_white.png'); */
+    background-size: cover;
+    background-clip:  text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 350px;
+    z-index: 5;
+}
+
 /* list */
 #list{
     display: flex;
