@@ -250,7 +250,7 @@ filter: blur(100px);
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    padding: 100px;
+    padding: 100px 20px ;
 }
 
 .content-text h1 {
