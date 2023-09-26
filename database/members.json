@@ -38,6 +38,11 @@
             "name":"راكان الخليفة",
             "description":"مطور مواقع",
             "works":["py","js"]
+        },
+        {
+            "name":"عبدالله خالد بن عمار",
+            "description":"مطور مواقع",
+            "works":["java","py","js"]
         }
     ],
 
