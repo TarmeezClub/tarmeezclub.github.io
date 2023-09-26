@@ -1,3 +1,6 @@
+:root{
+    --main-color:#0597f2;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -35,6 +38,20 @@ body{
 }
 #top-text h1{
     margin: 0px;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+#top-text h1::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 150px;
+    height: 2px;
+    /* background-color: var(--main-color); */
+    background: linear-gradient(90deg, transparent,var(--main-color),transparent);
+    left: 50%;
+    transform: translateX(-50%);
 }
 #top-text p{
     margin: 0;

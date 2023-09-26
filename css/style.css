@@ -255,7 +255,7 @@ filter: blur(100px);
 
 .content-text h1 {
     position: relative;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 .content-text h1::after{
     position: absolute;
@@ -264,6 +264,7 @@ filter: blur(100px);
     width: 150px;
     height: 2px;
     background-color: var(--main-color);
+    /* background: linear-gradient(90deg, transparent,var(--main-color),transparent); */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -398,6 +399,7 @@ filter: blur(100px);
     background-image: url("/images/Background.png");
     background-size: cover;
     background-position: center;
+    
 }
 #list h1{
     text-align: center;
@@ -413,6 +415,7 @@ filter: blur(100px);
     width: 150px;
     height: 2px;
     background-color: var(--main-color);
+    /* background: linear-gradient(90deg, transparent,var(--main-color),transparent); */
     left: 50%;
     transform: translateX(-50%);
 }
