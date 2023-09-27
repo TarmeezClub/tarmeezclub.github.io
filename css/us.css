@@ -266,6 +266,10 @@ h4{
     font-size: 15px;
 }
 
+.text p{
+    color: white;
+}
+
 
 @media (max-width:783px){
 
