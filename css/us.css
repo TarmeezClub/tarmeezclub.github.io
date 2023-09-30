@@ -65,8 +65,10 @@ body{
     color: #ffffff;
     opacity: 70%;
     margin: 40px 0px;
+    text-align: center;
 }
 .lines h2{
+    color: white; /* it's not changing to true white color, not sure why */
     font-weight: 400;
     font-size: 30px;
 }
@@ -75,7 +77,8 @@ body{
     margin-top: 60px;
     height: 5px;
     width: 400px;
-    background-color: white;
+    /* background-color: white; */
+    background: linear-gradient(90deg, transparent,var(--main-color),transparent);
     margin: auto 40px;
     border-radius: 5px;
 }
@@ -107,7 +110,10 @@ body{
     color: white;
     height: 100%;
     padding-top: 40px;
+    border: 1px solid #404040 ;
+    border-radius: 15px;
 }
+
 .card h1{
     font-size: 16px;
     margin: 0px;
@@ -225,7 +231,6 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 12px;
-
 }
 .tags-icons{
     display: flex;
@@ -234,18 +239,19 @@ body{
 .icon1, .icon2, .icon3{
     margin: 0px 5px 0px 5px;
 }
-.icons-text{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 40%;
+.icons-explanation{
+    display: grid;
+    place-items: center;
+    margin-bottom: 40px;
 }
-.icon{
+.icons-container{
     display: flex;
-    justify-self: start;
+    justify-content: center;
     align-items: center;
-    margin-left: 20px;
-    margin-top: 5px;
+    text-align: center;
+}
+.icon img{
+    margin: 10px 35px 0px 35px;
 }
 .contaner-cards{
     width: 100%;
@@ -255,9 +261,9 @@ body{
     align-items: center;
     flex-wrap: wrap;
 }
-.img{
+/* .img{
     margin-left: 15px;
-}
+} */
 p{
     color: #999898;
 }
@@ -270,11 +276,23 @@ h4{
     color: white;
 }
 
+@media (max-width:783px){
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
 
 @media (max-width:783px){
 
     #check:checked ~ ul{
-        left: 0; /* idk why but this important to make the list show when clicking the button*/
+        left: 0;
+    }
+    .lines h2{
+        color: white; /* it's not changing to true white color, not sure why */
+        font-weight: 400;
+        font-size: 30px;
+        width: 45%;
     }
 }
 
@@ -303,6 +321,9 @@ h4{
         flex-direction: row;
         flex-wrap: nowrap;
         max-width: 100%;
+    }
+    .lines h2{
+        font-size: 25px;
     }
     /* end style list*/
   
