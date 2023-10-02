@@ -78,9 +78,12 @@ body{
     height: 5px;
     width: 400px;
     /* background-color: white; */
-    background: linear-gradient(90deg, transparent,var(--main-color),transparent);
+    background: linear-gradient(90deg,var(--main-color),transparent);
     margin: auto 40px;
     border-radius: 5px;
+}
+.lines h2 + .line-between0{
+    background: linear-gradient(90deg, transparent,var(--main-color));
 }
 .lines2{
     display: flex;
