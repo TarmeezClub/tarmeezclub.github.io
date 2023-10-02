@@ -10,6 +10,17 @@ let worksIcons = {
     "cg":"calligrapher.png",
     "sw":"script.png"
 }
+let namesIcons = {
+    "java":"Java",
+    "py":"Python",
+    "js":"Java Script",
+    "swift":"Swift",
+    "graphic":"مصمم انفوجرفك",
+    "camera":"مصور",
+    "editoer":"مُمنتج",
+    "cg":"خطاط",
+    "sw":"كاتب محتوى"
+}
 let membersSection = document.querySelector('#members');
 
 // Title HTML Builder
@@ -32,7 +43,7 @@ function cardBuilder(member){
     for(let j of member.works){
         cardWorks += `
         <div class="icon3">
-            <img src="icons/${worksIcons[j]}" alt="no Icon" width="30px">
+            <img src="icons/${worksIcons[j]}" alt="no Icon" width="30px" title="${namesIcons[j]}"> 
         </div>
         `
     }
