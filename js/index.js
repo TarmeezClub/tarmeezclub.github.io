@@ -2,6 +2,7 @@
 // scroll Animation
 window.addEventListener("scroll", ()=>{
     let h2ContestText = document.querySelector('.content-text h2');
+    let arrowsLR = document.querySelectorAll('.content-text')
     let windowHeight = window.innerHeight;
     let elementTop = h2ContestText.getBoundingClientRect().top;
     let elementVisible = 150;
@@ -11,6 +12,7 @@ window.addEventListener("scroll", ()=>{
         h2ContestText.classList.remove("show");
     } 
 });
+// TODO: Remove scroll effect if it does done or Conditions Functions
 
 
 // Slider auto move

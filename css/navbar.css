@@ -22,9 +22,7 @@ nav{
 
 nav ul{
     display: flex;
-
     justify-content: flex-end;
- 
     font-weight: 400;
 }
 nav ul li{

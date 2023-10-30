@@ -19,10 +19,15 @@ body{
     margin: 0;
     padding: 0;
 }
-/*nav style*/
 
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    padding: 0 5px ;
+}
 
-/* [END] nav style*/
 /* Slider */
 #images{
     width: 100%;
@@ -237,9 +242,10 @@ filter: blur(100px);
     flex-direction: column;
     /* height: 400px; */
     width: 100%;
-    border-bottom: 2px var(--main-color) solid;
+    /* border-bottom: 2px var(--main-color) solid; */
     color: white;
     text-align: center;
+
 }
 .content-text{
     /* margin-top: 40px; */
@@ -250,7 +256,7 @@ filter: blur(100px);
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    padding: 100px 20px ;
+    padding: 150px 20px ;
 }
 
 .content-text h1 {
@@ -302,18 +308,13 @@ filter: blur(100px);
     height: 100%;
     left: 5%;
     top: 10%;
-    /* top: 50%;
-    transform: translateY(-50%); */
-    /* background-color: red; */
     transform: rotateY(180deg);
-    /* transform: rotateZ(90deg); */
     font-size: 300px;
     padding: 0;
     margin: 0;
     color: white;
     z-index: -1;
     text-shadow: 0 0 10px #fff;
-    /* opacity: .05; */
 
 }
 .content-text .left-c .left-c-1{
@@ -324,6 +325,11 @@ filter: blur(100px);
     z-index: 10;
     font-size: 300px;
     text-shadow: 0 0 5px #000;
+}
+.light .content-text .left-c .left-c-1,
+.light .content-text .right-c .right-c-1{
+    filter: blur(50px);
+
 }
 .content-text .left-c .left-c-2{
     position: absolute;
@@ -354,6 +360,7 @@ filter: blur(100px);
     margin: 0;
     color: white;
     text-shadow: 0 0 10px #fff;
+    
     /* color: #1A1A1A; */
     /* opacity: .05; */
 }
@@ -393,14 +400,14 @@ filter: blur(100px);
 }
 
 .background{
+    position: relative;
     padding: 100px 10px;
     width: 100%;
     height: 100%;
-    background-image: url("/images/Background.png");
-    background-size: cover;
-    background-position: center;
+    background-color: #1C1C1C;
     
 }
+
 #list h1{
     text-align: center;
     font-size: 30px;
@@ -441,8 +448,10 @@ filter: blur(100px);
     flex-wrap: wrap;
     gap: 10px;
     transition: 1s;
+    position: relative;
  
 }
+
 #list li:hover{
     transform: translateY(-5%);
 }
@@ -566,5 +575,12 @@ filter: blur(100px);
         transform: translateX(-100%);
     }100%{
         transform: translate(-50%,-50%);
+    }
+}
+@keyframes toup {
+    0%{
+        transform: translateY(-10%);
+    }100%{
+        transform: translateY(0);
     }
 }
