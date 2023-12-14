@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  user-select: none;
+  transition: 0.2s ease-in-out;
+}
+body {
+  background-color: #1a1a1a;
+  width: 100vw;
+  padding-top: 5vh;
+}
+.Tarmeez{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.Tarmeez img{
+  height: 17%;
+  width: 17%;
+}
+.x-active {
+  background-color: #08d9d6;
+}
+
+.o-active {
+  background-color: gray;
+}
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border: 5px solid #0599f2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 75px; /* TOP - RIGHT - BOTTOM - LEFT */
+  border-radius: 15px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.turn-box {
+  color: #f1f8fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0599f2;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+}
+.turn-both {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+.x-wrapper {
+  margin-right: 20px;
+}
+#play-again {
+  margin-right: 10px;
+  cursor: pointer;
+}
+button {
+  border: none;
+  outline: none;
+}
+button svg {
+  vertical-align: middle;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 400px;
+  width: 400px;
+  margin: 15px auto; /* TOP - RIGHT - BOTTOM - LEFT */
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-color: #0599f2;
+  color: #f1f8fe;
+  margin: 10px;
+  border-radius: 7px;
+}
+.box:hover {
+  background-color: #00eaf1;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.stats-box .player-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats-box {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  width: 110px;
+  height: 90px;
+  border: 3.5px solid #00eaf1;
+  border-radius: 8px;
+  margin: 8px;
+}
+.stats-box h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f8fe;
+  margin-top: 1px;
+}
+.stats-box h3 {
+  color: #f1f8fe;
+  margin-top: 0px;
+}
