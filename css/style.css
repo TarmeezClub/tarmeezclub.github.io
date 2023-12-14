@@ -325,7 +325,7 @@ body{
     transform: translateY(-50%);
     z-index: 10;
     font-size: 300px;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 5px #888;
 }
 .light .content-text .left-c .left-c-1,
 .light .content-text .right-c .right-c-1{
@@ -372,7 +372,7 @@ body{
     transform: translateY(-50%);
     z-index: 10;
     font-size: 300px;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 5px #888;
 }
 .content-text .right-c .right-c-2{
     position: absolute;
