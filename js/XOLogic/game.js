@@ -46,6 +46,7 @@ function updateTurnIndicators() {
 }
 
 function startGame() {
+    document.querySelector('.choose-plyer-first').classList.add('hide');
     let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('click', cellClicked);
@@ -109,6 +110,8 @@ async function sendBoardToServer() {
         }
         await new Promise(resolve => setTimeout(resolve, 1000));
         canPlay = false;
+        // stop some time to check result 
+        // setTimeout(resetMatch,1000)
         resetMatch();
     } else {
         await new Promise(resolve => setTimeout(resolve, 1000));

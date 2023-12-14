@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ai vs Player" />
     <!-- CSS Links -->
-    <link rel="stylesheet" href="css\ticTacToe.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/ticTacToe.css" />
     <!--FONTS-->
     <!--font arabic-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -18,13 +21,44 @@
     <!--font english-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/a7a141be17.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>XO</title>
+    <title>Tarmeez | XO</title>
   </head>
   <body>
+    <div class="navbar">
+      <nav>
+          <!-- <div class="container"> -->
+              <a href="/"><img class="logo"  src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+              <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('links')">
+              <path
+                      class="lines top"
+                      d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path
+                      class="lines middle"
+                      d="m 30,50 h 40" />
+              <path
+              class="lines bottom"
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+              </svg>
+          </label>
+              <ul class="links">
+                  <li><a class="home" href="#">الرئيسية</a></li>
+                  <li><a href="suggetions.html">الإقتراحات</a></li>
+                  <li><a href="us.html">نحن</a></li>
+                  <li><a class="active" href="ticTacToe.html">إلعب XO</a></li>
+
+                  <li class="button"><a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a></li>
+              </ul> 
+          <!-- </div> -->
+      </nav>
+  </div>
     <!-- <div class="Tarmeez">
       <img src="assets/Tarmeez.jpg" alt="Tarmeez logo">
     </div> -->
@@ -40,83 +74,12 @@
         </div>
         <div class="center">
           <button id="play-again">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0,0,256,256"
-              width="40px"
-              height="40px"
-            >
-              <g
-                fill-opacity="0"
-                fill="#000000"
-                fill-rule="nonzero"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-                style="mix-blend-mode: normal"
-              >
-                <path d="M0,256v-256h256v256z" id=""></path>
-              </g>
-              <g
-                id="reset-game"
-                fill="#08d9d6"
-                fill-rule="nonzero"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-                style="mix-blend-mode: normal"
-              >
-                <path
-                  d="M32,256c-17.67311,0 -32,-14.32689 -32,-32v-192c0,-17.67311 14.32689,-32 32,-32h192c17.67311,0 32,14.32689 32,32v192c0,17.67311 -14.32689,32 -32,32z"
-                  id="shape"
-                ></path>
-              </g>
-              <g
-                fill="#000000"
-                fill-rule="nonzero"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-                style="mix-blend-mode: normal"
-              >
-                <g
-                  transform="translate(112.17361,-60.29762) rotate(40) scale(3.55556,3.55556)"
-                >
-                  <path
-                    d="M34.09961,7.00195c-1.07001,-0.0562 -2.09961,0.77673 -2.09961,1.99023v3.34766c-11.33513,1.91057 -20,11.78941 -20,23.66016c0,13.234 10.767,24 24,24c13.233,0 24,-10.766 24,-24c0,-5.67 -2.01488,-11.17214 -5.67187,-15.49414c-1.43,-1.687 -3.95372,-1.8997 -5.63672,-0.4707c-1.687,1.427 -1.8977,3.95167 -0.4707,5.63867c2.437,2.879 3.7793,6.54617 3.7793,10.32617c0,8.822 -7.178,16 -16,16c-8.822,0 -16,-7.178 -16,-16c0,-7.43861 5.11088,-13.68922 12,-15.47266v2.47852c0,1.619 1.82948,2.56014 3.14648,1.61914l9.80469,-7.00781c1.11,-0.793 1.11,-2.44333 0,-3.23633l-9.80469,-7.00781c-0.32925,-0.23525 -0.6902,-0.35236 -1.04687,-0.37109z"
-                  ></path>
-                </g>
-              </g>
-            </svg>
+            <i class="fa-solid fa-rotate-right" id="reset-game"></i>
           </button>
         </div>
       </div>
       <div class="main-grid">
+   
         <div class="box align cell" data-row="0" data-col="0"></div>
         <div class="box align cell" data-row="0" data-col="1"></div>
         <div class="box align cell" data-row="0" data-col="2"></div>
@@ -126,6 +89,9 @@
         <div class="box align cell" data-row="2" data-col="0"></div>
         <div class="box align cell" data-row="2" data-col="1"></div>
         <div class="box align cell" data-row="2" data-col="2"></div>
+        <div class="choose-plyer-first">
+          <span>اختر لاعبك</span>
+        </div>
       </div>
       <div class="stats">
         <div class="stats-box">
@@ -148,6 +114,44 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="logos">
+          <img class="imamu" src="images/Imam_Logo_white.png" alt="logo imamu" height="80px">
+          <img class="tarmeez" src="images/tarmeez_logo_white.png" alt="" height=20px>
+      </div>
+
+          <div class="links-footer">
+              <h4>عن ترميز</h4>
+              <div class="links">
+                  <a href="/">الرئيسية</a>
+                  <a href="#" hidden>منشوراتنا</a>
+                  <a href="us.html">نحن</a>
+                  <a href="https://forms.gle/gskNBSo2Uxj4xCaw9" target="_blank">انضم لنا</a>
+              </div>
+          </div>
+          <div class="about-us">
+              <div class="text">
+                  <h4 >ترميز</h4>
+                  <p>نادي محفوف بالشغف والإبداع...</p>
+              </div>
+              <h4>تواصل معنا</h4>
+              <div class="soical">
+                  <div class="twitter">
+                      <a href="https://x.com/tarmeezclub?s=21&t=So_EXtmogrYcc4DwNeQ7ww" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a>
+                      <!-- <span>@tarmeezClub</span> -->
+                  </div>
+                  <div class="youtube">
+                      <a href="#" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
+                      <!-- <span>@tarmeezClub</span> -->
+                  </div>
+                  <div class="instagram">
+                      <!-- <span>@tarmeezClub</span> -->
+                      <a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                  </div>
+              </div>
+         
+          </div>
+      </footer>
     <script src="js/XOLogic/aiCode.js"></script>
     <script src="js/XOLogic/game.js"></script>
   </body>
