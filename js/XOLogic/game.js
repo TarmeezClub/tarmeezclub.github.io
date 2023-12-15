@@ -47,6 +47,7 @@ function updateTurnIndicators() {
 
 function startGame() {
     document.querySelector('.choose-plyer-first').classList.add('hide');
+    document.querySelector('.turn-both').classList.remove('before-play');
     let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('click', cellClicked);
