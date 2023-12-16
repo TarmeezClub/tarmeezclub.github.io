@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -18,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!--icons-->
     <script src="https://kit.fontawesome.com/a7a141be17.js" crossorigin="anonymous"></script>
+
     <!-- website -->
     <link rel="icon" type="image/x-icon" href="/images/website_logo.png">
     <meta property="og:image" content="images/Tarmeez.jpg" />
@@ -25,7 +28,7 @@
     <title>Tarmeez</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar top-0 pt-0">
         <nav>
             <!-- <div class="container"> -->
                 <a href="/"><img class="logo"  src="images/tarmeez_logo_white.png" alt="tarmeez_logo_white" width="250px"></a>
@@ -55,46 +58,52 @@
             <!-- </div> -->
         </nav>
     </div>
-        <section id="images">
-            <!-- <div class="container"> -->
-            <div class="slider">
-                <div class="slides">
-
-                    <input type="radio" name="radio-btn" id="radio1" checked>
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-
-                <div class="slide frist">
-                    <!-- <img src="images-slider/1.jpg" alt=""> -->
-                    <div class="nav-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
+        <section id="" class="h-100 w-100 d-flex justify-content-center align-items-center">
+            <div id="carouselExampleCaptions" class="carousel slide w-75">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item position-relative active">
+                    <img src="/images/side-images/WhatsApp Image 2023-12-15 at 20.30.25_d6127c3b.jpg" class="d-block w-100" alt="...">
+                    <div class="text-content">
+                        <h5 class="opacity-100">تطبيق شعبة</h5>
+                        <p>أُسس تطبيق شعبة لنظام iOS إمتدادًا لموقع شعبة، بهدف تسهيل البحث عن قروبات المواد و إضافة قروبات للشعب الجديدة.</p>
                     </div>
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="/images/side-images/WhatsApp Image 2023-12-15 at 17.33.07_08b9f8f8.jpg" class="d-block w-100" alt="...">
+                    <div class="text-content">
+                        <h5 class="opacity-100">هاكاثون البرمجة الأول</h5>
+                        <p>الذي أطلق في 2023 م ، شارك أعضاء فريق ترميز بالهاكاثون الأول بلغة جاڤا  في جامعة الامام محمد بن سعود ، و حَظِيَ على المركز الرابع .</p>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item position-relative">
+                    <img src="/images/side-images/WhatsApp Image 2023-12-15 at 17.33.08_5866f78a.jpg" class="d-block w-100" alt="...">
+                    <div class="text-content">
+                        <h5 class="opacity-100">مسابقة</h5>
+                        <p>شارك فريق ترميز في مسابقة Programming jam 8.0 و حقق المركز السادس على مستوى جامعات المملكة .</p>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
                 </div>
-                <div class="slide">
-                    <img src="images-slider/5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images-slider/9.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images-slider/7.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images-slider/10.jpeg" alt="">
-                </div>
-            </div>
-        <!-- <span class="cir-1"></span>
-        <span class="cir-2"></span> -->
-        </div>
-        <div class="slider-text">
-            <p>المكان المناسب لاطلاق<br> عنان افكارك وابداعك<br></p>
-        </div>
-    <!-- </div> -->
-    </section>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
     <section id="pragraph">
         
         <div class="content-text">
@@ -196,5 +205,7 @@
             </div>
         </footer>
         <script src="./js/index.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
 </html>

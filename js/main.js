@@ -12,7 +12,7 @@ function revalCards(){
     var st = window.pageYOffset || document.documentElement.scrollTop;
     flexboxMember.forEach(element => {
         let elementTop = element.getBoundingClientRect().top;
-        if (elementTop-500<0   && !element.classList.contains('reval')) {
+        if (elementTop - 500 <0 && !element.classList.contains('reval')) {
         element.classList.add('reval');
         } 
     });
