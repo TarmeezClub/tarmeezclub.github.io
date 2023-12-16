@@ -98,17 +98,16 @@ async function sendBoardToServer() {
     // Check the game status
     let gameStatus = aiResult.gameStatus;
     if (gameStatus === 'X' || gameStatus === 'O' || gameStatus === 'Tie') {
-        console.log(gameStatus);
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        updateBoard();
-        if (gameStatus === 'X') {
+        console.log("Someone Won !", gameStatus);
+        if (swapSymbol(gameStatus) === 'X') {
             xRes.textContent = parseInt(xRes.textContent) + 1;
-        } else if (gameStatus === 'O') {
+        } else if (swapSymbol(gameStatus) === 'O') {
             oRes.textContent = parseInt(oRes.textContent) + 1;
         } else if (gameStatus === 'Tie') {
             console.log("Tie");
             drawRes.textContent = parseInt(drawRes.textContent) + 1;
         }
+        updateBoard();
         await new Promise(resolve => setTimeout(resolve, 1000));
         canPlay = false;
         // stop some time to check result 
@@ -148,5 +147,7 @@ function resetGame() {
     xRes.textContent = 0;
     oRes.textContent = 0;
     drawRes.textContent = 0;
+    document.querySelector('.choose-plyer-first').classList.remove('hide');
+    document.querySelector('.turn-both').classList.add('before-play');
     updateTurnIndicators();
 }

@@ -69,5 +69,10 @@ function aiMove(board) {
         return { board, gameStatus: 'Tie' };
     }
     board[Math.floor(newMove / 3)][newMove % 3] = "X";
+    
+    let empty = emptyNodes(board);
+    if (empty.length == 0){
+        return { board, gameStatus: 'Tie' };
+    }
     return { board, gameStatus: checkWin("X", board) ? 'X' : checkWin("O", board) ? 'O' : 'On going' };
 }
