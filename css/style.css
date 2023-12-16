@@ -598,7 +598,7 @@ body{
         width: 100% !important;
     }
     .text-content{
-        bottom: 70px;
+        bottom: 70px !important;
     }
     .text-content h5{
         font-size: 36px;
@@ -614,7 +614,7 @@ body{
         min-height: 400px !important;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px){
     /* nav style*/
     nav a{
         font-size: 16px;
@@ -699,7 +699,7 @@ body{
         width: 100% !important;
     }
     .our-team .container{
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .our-team .text, .our-team .image{
         width: auto;
@@ -721,7 +721,7 @@ body{
         bottom: -10px;
     }
     .text-content{
-        bottom: 38px;
+        bottom: 38px !important;
     }
     .text-content h5{
         font-size: 18px;
