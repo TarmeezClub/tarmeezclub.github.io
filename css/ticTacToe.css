@@ -209,4 +209,8 @@ button svg {
     margin-bottom: 100px;
     padding: 0;
   }
+  .checkbtn {
+    font-size: unset;
+    margin-top: 10px;
+  }
 }
