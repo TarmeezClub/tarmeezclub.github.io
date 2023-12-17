@@ -201,3 +201,12 @@ button svg {
   color: #f1f8fe;
   margin-top: 0px;
 }
+@media screen and (max-width: 600px) {
+  .outer-container {
+    /* border: 0px solid transparent; */
+    border: unset;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 0;
+  }
+}
