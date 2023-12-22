@@ -49,7 +49,7 @@ function mini(board, depth) {
 function minimax(board) {
     let depth = 8;
     let empty = emptyNodes(board);
-    if (empty.length == 0){
+    if (empty.length === 0){
         return -1;
     }
     let costs = empty.map(i => {
