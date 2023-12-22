@@ -64,7 +64,7 @@ async function cellClicked(event) {
         updateTurnIndicators();
         canPlay = false;
         let emptyIncludeDash = flawInCountEmptyNodes(board)
-        console.log(emptyIncludeDash)
+        // console.log(emptyIncludeDash)
         if (emptyIncludeDash.length === 1) {
             let indx = emptyIncludeDash[0];
             board[Math.floor(indx / 3)][indx % 3] = '';
@@ -116,11 +116,11 @@ async function sendBoardToServer() {
     else if (flawInCountEmptyNodes(board).length === 0) { 
         gameStatus = "Tie"; 
     }
-    console.log(gameStatus);
+    // console.log(gameStatus);
     let isUserWon = playerSymbol === swapSymbol(gameStatus)
     if (gameStatus === 'X' || gameStatus === 'O' || gameStatus === 'Tie') {
-        console.log("Result", gameStatus);
-        console.log("isUserWon: ", isUserWon)
+        // console.log("Result", gameStatus);
+        // console.log("isUserWon: ", isUserWon)
         await new Promise(resolve => setTimeout(resolve, 1000));
         if (!isUserWon) {
             updateBoard();
@@ -130,7 +130,7 @@ async function sendBoardToServer() {
         } else if (swapSymbol(gameStatus) === 'O') {
             oRes.textContent = parseInt(oRes.textContent) + 1;
         } else if (gameStatus === 'Tie') {
-            console.log("Tie ind");
+            // console.log("Tie ind");
             drawRes.textContent = parseInt(drawRes.textContent) + 1;
         }
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -163,7 +163,7 @@ function makeDeterminedFlaw(board) {
     if (!flawHappend && (randomPlaces.length <= difficulty)) {
         let indexOfFlaw = randomPlaces[Math.floor(Math.random() * randomPlaces.length)]
         board[Math.floor(indexOfFlaw / 3)][indexOfFlaw % 3] = '-';
-        console.log(board)
+        // console.log(board)
         flawHappend = true
         return board;
     }
@@ -173,7 +173,7 @@ function makeDeterminedFlaw(board) {
 
 function resetMatch() {
     board = [['', '', ''], ['', '', ''], ['', '', '']];
-    console.log(playerSymbol)
+    // console.log(playerSymbol)
     if (playerSymbol === 'O') {
         board[1][1] = 'X';
     }
