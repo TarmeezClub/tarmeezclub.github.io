@@ -29,8 +29,8 @@ document.getElementById('choose-o').addEventListener('click', function () {
 });
 
 function flawActivasion() {
-    // here we will make a 20% chance for the flawHappend variable to be false in the current game
-    if (Math.random() < 0.8) {
+    // here we will make a 50% chance for the flawHappend variable to be false in the current game
+    if (Math.random() < 0.5) {
         flawHappend = false;
     }
 }
@@ -90,10 +90,27 @@ function updateBoard() {
     }
 }
 
+function getGameStatus(board) {
+    if (checkWin("X", board)) {
+        return swapSymbol("X");
+    }
+    else if (checkWin("O", board)) {
+        return swapSymbol("O");
+    }
+    else if (flawInCountEmptyNodes(board).length === 0) {
+        return "Tie";
+    } else {
+        return "on going";
+    }
+}
+
 async function sendBoardToServer() {
     console.log(flawHappend)
     canPlay = false;
     let modifiedBoard = board;
+    let gameStatus = getGameStatus(board);
+    
+
     if (playerSymbol === 'X') {
         // Swap X and O for the AI's logic if the player is X
         modifiedBoard = board.map(row => row.map(swapSymbol));
@@ -103,29 +120,22 @@ async function sendBoardToServer() {
     if (playerSymbol === 'X') {
         modifiedBoard = makeDeterminedFlaw(modifiedBoard)
     }
-    let aiResult = aiMove(modifiedBoard);
-    
-    // If the player is X, swap X and O back after the AI's move
-    aiResult.board = aiResult.board.map(row => row.map(swapSymbol));
-    
-    // Update the board with the AI's move
-    board = aiResult.board;
-    if (playerSymbol === 'O') {
-        board = makeDeterminedFlaw(board)
+    if (gameStatus === "on going") {
+        let aiResult = aiMove(modifiedBoard);
+
+        // If the player is X, swap X and O back after the AI's move
+        aiResult.board = aiResult.board.map(row => row.map(swapSymbol));
+
+        // Update the board with the AI's move
+        board = aiResult.board;
+        if (playerSymbol === 'O') {
+            board = makeDeterminedFlaw(board)
+        }
     }
 
     // Check the game status
-    let gameStatus = "on going" // nono
-    if (checkWin("X", board)) { 
-        gameStatus = swapSymbol("X"); 
-    }
-    else if (checkWin("O", board)) { 
-        gameStatus = swapSymbol("O"); 
-    }
-    else if (flawInCountEmptyNodes(board).length === 0) { 
-        gameStatus = "Tie"; 
-    }
-    // console.log(gameStatus);
+    gameStatus = getGameStatus(board);
+    console.log(gameStatus);
     let isUserWon = playerSymbol === swapSymbol(gameStatus)
     if (gameStatus === 'X' || gameStatus === 'O' || gameStatus === 'Tie') {
         // console.log("Result", gameStatus);
@@ -139,7 +149,6 @@ async function sendBoardToServer() {
         } else if (swapSymbol(gameStatus) === 'O') {
             oRes.textContent = parseInt(oRes.textContent) + 1;
         } else if (gameStatus === 'Tie') {
-            // console.log("Tie ind");
             drawRes.textContent = parseInt(drawRes.textContent) + 1;
         }
         await new Promise(resolve => setTimeout(resolve, 1000));
