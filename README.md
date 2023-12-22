@@ -1,7 +1,3 @@
-Creating a README for a developer and including a short tutorial on using the GitFlow branching strategy can be an engaging way to introduce contributors to your project. Here's an example of what that might look like:
-
----
-
 # 👋 Welcome to Tarmeez Club Website Repository! 
 
 This is the heart of our club's web presence. Our website acts as a showcase of our activities, projects, and the amazing team behind the scenes. Check it out live: [Tarmeez Club Live Website](https://tarmeezclub.github.io).
