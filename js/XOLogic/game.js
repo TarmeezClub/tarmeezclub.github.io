@@ -156,7 +156,7 @@ function flawInCountEmptyNodes(board) {
 function makeDeterminedFlaw(board) {
     let xSwap = swapSymbol('X');
     let randomPlaces = emptyNodes(board)
-    let difficulty = 3; // range from 2 to 8
+    let difficulty = 2; // range from 2 to 8
     // the more the difficulty the more the flaw, 5 is harder than 8
     // because the flaw will happen early in the begginning of the game
     // 3 or 2 would be so hard and rare to win
