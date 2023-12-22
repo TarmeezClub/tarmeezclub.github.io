@@ -29,8 +29,8 @@ document.getElementById('choose-o').addEventListener('click', function () {
 });
 
 function flawActivasion() {
-    // here we will make a 50% chance for the flawHappend variable to be false in the current game
-    if (Math.random() < 0.5) {
+    // here we will make a 38% chance for the flaw to happen if player is x, otherwise 50%
+    if (Math.random() < (playerSymbol === 'X' ? 0.38 : 0.5)) {
         flawHappend = false;
     }
 }
@@ -105,7 +105,7 @@ function getGameStatus(board) {
 }
 
 async function sendBoardToServer() {
-    console.log(flawHappend)
+    // console.log(flawHappend)
     canPlay = false;
     let modifiedBoard = board;
     let gameStatus = getGameStatus(board);
@@ -135,7 +135,7 @@ async function sendBoardToServer() {
 
     // Check the game status
     gameStatus = getGameStatus(board);
-    console.log(gameStatus);
+    // console.log(gameStatus);
     let isUserWon = playerSymbol === swapSymbol(gameStatus)
     if (gameStatus === 'X' || gameStatus === 'O' || gameStatus === 'Tie') {
         // console.log("Result", gameStatus);
