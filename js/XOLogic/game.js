@@ -1,7 +1,7 @@
 let playerSymbol = '';
 let board = [['', '', ''], ['', '', ''], ['', '', '']]
 let canPlay = false;
-let flawHappend = false;
+let flawHappend = true;
 let xRes = document.querySelector("#total-x");
 let oRes = document.querySelector("#total-o");
 let drawRes = document.querySelector("#total-draw");
@@ -28,6 +28,13 @@ document.getElementById('choose-o').addEventListener('click', function () {
     canPlay = true;
 });
 
+function flawActivasion() {
+    // here we will make a 38% chance for the flaw to happen if player is x, otherwise 50%
+    if (Math.random() < (playerSymbol === 'X' ? 0.38 : 0.5)) {
+        flawHappend = false;
+    }
+}
+
 function updateTurnIndicators() {
     const xWrapper = document.querySelector(".x-wrapper .turn-box");
     const oWrapper = document.querySelector(".o-wrapper .turn-box");
@@ -46,6 +53,7 @@ function updateTurnIndicators() {
 }
 
 function startGame() {
+    flawActivasion();
     document.querySelector('.choose-plyer-first').classList.add('hide');
     document.querySelector('.turn-both').classList.remove('before-play');
     let cells = document.querySelectorAll('.cell');
@@ -82,9 +90,27 @@ function updateBoard() {
     }
 }
 
+function getGameStatus(board) {
+    if (checkWin("X", board)) {
+        return swapSymbol("X");
+    }
+    else if (checkWin("O", board)) {
+        return swapSymbol("O");
+    }
+    else if (flawInCountEmptyNodes(board).length === 0) {
+        return "Tie";
+    } else {
+        return "on going";
+    }
+}
+
 async function sendBoardToServer() {
+    // console.log(flawHappend)
     canPlay = false;
     let modifiedBoard = board;
+    let gameStatus = getGameStatus(board);
+    
+
     if (playerSymbol === 'X') {
         // Swap X and O for the AI's logic if the player is X
         modifiedBoard = board.map(row => row.map(swapSymbol));
@@ -94,28 +120,21 @@ async function sendBoardToServer() {
     if (playerSymbol === 'X') {
         modifiedBoard = makeDeterminedFlaw(modifiedBoard)
     }
-    let aiResult = aiMove(modifiedBoard);
-    
-    // If the player is X, swap X and O back after the AI's move
-    aiResult.board = aiResult.board.map(row => row.map(swapSymbol));
-    
-    // Update the board with the AI's move
-    board = aiResult.board;
-    if (playerSymbol === 'O') {
-        board = makeDeterminedFlaw(board)
+    if (gameStatus === "on going") {
+        let aiResult = aiMove(modifiedBoard);
+
+        // If the player is X, swap X and O back after the AI's move
+        aiResult.board = aiResult.board.map(row => row.map(swapSymbol));
+
+        // Update the board with the AI's move
+        board = aiResult.board;
+        if (playerSymbol === 'O') {
+            board = makeDeterminedFlaw(board)
+        }
     }
 
     // Check the game status
-    let gameStatus = "on going" // nono
-    if (checkWin("X", board)) { 
-        gameStatus = swapSymbol("X"); 
-    }
-    else if (checkWin("O", board)) { 
-        gameStatus = swapSymbol("O"); 
-    }
-    else if (flawInCountEmptyNodes(board).length === 0) { 
-        gameStatus = "Tie"; 
-    }
+    gameStatus = getGameStatus(board);
     // console.log(gameStatus);
     let isUserWon = playerSymbol === swapSymbol(gameStatus)
     if (gameStatus === 'X' || gameStatus === 'O' || gameStatus === 'Tie') {
@@ -130,7 +149,6 @@ async function sendBoardToServer() {
         } else if (swapSymbol(gameStatus) === 'O') {
             oRes.textContent = parseInt(oRes.textContent) + 1;
         } else if (gameStatus === 'Tie') {
-            // console.log("Tie ind");
             drawRes.textContent = parseInt(drawRes.textContent) + 1;
         }
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -154,9 +172,8 @@ function flawInCountEmptyNodes(board) {
 }
 
 function makeDeterminedFlaw(board) {
-    let xSwap = swapSymbol('X');
     let randomPlaces = emptyNodes(board)
-    let difficulty = 7; // range from 2 to 8
+    let difficulty = 6; // range from 2 to 8
     // the more the difficulty the more the flaw, 5 is harder than 8
     // because the flaw will happen early in the begginning of the game
     // 3 or 2 would be so hard and rare to win
@@ -179,7 +196,7 @@ function resetMatch() {
     }
     updateBoard();
     canPlay = true;
-    flawHappend = false;
+    flawActivasion();
     updateTurnIndicators();
 
 }
@@ -196,7 +213,7 @@ function resetGame() {
     updateBoard();
     playerSymbol = ''
     canPlay = false;
-    flawHappend = false;
+    flawActivasion();
     xRes.textContent = 0;
     oRes.textContent = 0;
     drawRes.textContent = 0;
