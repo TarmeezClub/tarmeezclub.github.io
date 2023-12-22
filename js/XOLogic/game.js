@@ -1,7 +1,7 @@
 let playerSymbol = '';
 let board = [['', '', ''], ['', '', ''], ['', '', '']]
 let canPlay = false;
-let flawHappend = false;
+let flawHappend = true;
 let xRes = document.querySelector("#total-x");
 let oRes = document.querySelector("#total-o");
 let drawRes = document.querySelector("#total-draw");
@@ -28,6 +28,13 @@ document.getElementById('choose-o').addEventListener('click', function () {
     canPlay = true;
 });
 
+function flawActivasion() {
+    // here we will make a 20% chance for the flawHappend variable to be false in the current game
+    if (Math.random() < 0.8) {
+        flawHappend = false;
+    }
+}
+
 function updateTurnIndicators() {
     const xWrapper = document.querySelector(".x-wrapper .turn-box");
     const oWrapper = document.querySelector(".o-wrapper .turn-box");
@@ -46,6 +53,7 @@ function updateTurnIndicators() {
 }
 
 function startGame() {
+    flawActivasion();
     document.querySelector('.choose-plyer-first').classList.add('hide');
     document.querySelector('.turn-both').classList.remove('before-play');
     let cells = document.querySelectorAll('.cell');
@@ -83,6 +91,7 @@ function updateBoard() {
 }
 
 async function sendBoardToServer() {
+    console.log(flawHappend)
     canPlay = false;
     let modifiedBoard = board;
     if (playerSymbol === 'X') {
@@ -156,7 +165,7 @@ function flawInCountEmptyNodes(board) {
 function makeDeterminedFlaw(board) {
     let xSwap = swapSymbol('X');
     let randomPlaces = emptyNodes(board)
-    let difficulty = 3; // range from 2 to 8
+    let difficulty = 7; // range from 2 to 8
     // the more the difficulty the more the flaw, 5 is harder than 8
     // because the flaw will happen early in the begginning of the game
     // 3 or 2 would be so hard and rare to win
@@ -179,7 +188,7 @@ function resetMatch() {
     }
     updateBoard();
     canPlay = true;
-    flawHappend = false;
+    flawActivasion();
     updateTurnIndicators();
 
 }
@@ -196,7 +205,7 @@ function resetGame() {
     updateBoard();
     playerSymbol = ''
     canPlay = false;
-    flawHappend = false;
+    flawActivasion();
     xRes.textContent = 0;
     oRes.textContent = 0;
     drawRes.textContent = 0;
