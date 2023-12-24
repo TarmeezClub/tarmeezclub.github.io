@@ -2,9 +2,16 @@ let playerSymbol = '';
 let board = [['', '', ''], ['', '', ''], ['', '', '']]
 let canPlay = false;
 let flawHappend = true;
+let isImpossibleMode = true; // when this is true: the may happen, otherwise IT IS IMPOSSIBLE TO WIN!
 let xRes = document.querySelector("#total-x");
 let oRes = document.querySelector("#total-o");
 let drawRes = document.querySelector("#total-draw");
+
+// create a button to change the game mode after that unComment the event listener
+// document.getElementById('gameMode').addEventListener('click', function () {
+//     isImpossibleMode = !isImpossibleMode
+//     resetGame();
+// });
 
 document.getElementById('choose-x').addEventListener('click', function () {
     resetGame();
@@ -29,8 +36,9 @@ document.getElementById('choose-o').addEventListener('click', function () {
 });
 
 function flawActivasion() {
-    // here we will make a 38% chance for the flaw to happen if player is x, otherwise 50%
-    if (Math.random() < (playerSymbol === 'X' ? 0.38 : 0.5)) {
+    // here we will make a 10% chance for the flaw to happen if player is x, otherwise 50%
+    if (!isImpossibleMode && (Math.random() < (playerSymbol === 'X' ? 0.10 : 0.5))) {
+        console.log("Hah Yeah you deserve to win :D")
         flawHappend = false;
     }
 }
