@@ -17,6 +17,11 @@ body {
   /* width: 100vw; */
   /* padding-top: 5vh; */
 }
+.header{
+  margin: 25px auto;
+  text-align: center;
+  color: #f1f8fe;
+}
 /* Special */
 .navbar {
   /* top: 0; */
@@ -54,7 +59,7 @@ nav .logo {
   flex-direction: column;
   width: fit-content;
   border: 5px solid #0599f2;
-  margin: 150px auto;
+  margin: 50px auto;
   /* margin-left: auto;
   margin-right: auto; */
   padding: 50px 75px; /* TOP - RIGHT - BOTTOM - LEFT */
@@ -82,7 +87,10 @@ nav .logo {
   z-index: 10;
 }
 .turn-both.before-play {
-  transform: translateX(70px) translateY(350px);
+  transform: translateX(60px) translateY(270px);
+}
+.choose-plyer-first span{
+  margin-bottom: 200px;
 }
 .turn-both.before-play .x-wrapper {
   width: 113px;
