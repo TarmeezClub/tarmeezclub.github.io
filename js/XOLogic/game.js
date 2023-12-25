@@ -2,13 +2,21 @@ let playerSymbol = '';
 let board = [['', '', ''], ['', '', ''], ['', '', '']]
 let canPlay = false;
 let flawHappend = true;
+let isImpossibleMode = false; // when this is true: IT IS IMPOSSIBLE TO WIN!
 let xRes = document.querySelector("#total-x");
 let oRes = document.querySelector("#total-o");
 let drawRes = document.querySelector("#total-draw");
 
+// create a button to change the game mode after that unComment the event listener
+// document.getElementById('gameMode').addEventListener('click', function () {
+//     isImpossibleMode = !isImpossibleMode
+//     resetGame();
+// });
+
 document.getElementById('choose-x').addEventListener('click', function () {
     resetGame();
     playerSymbol = 'X';
+    flawActivasion();
     startGame();
     updateTurnIndicators();
     canPlay = true;
@@ -25,6 +33,7 @@ document.getElementById('game-mode').addEventListener('click',function(){
 document.getElementById('choose-o').addEventListener('click', function () {
     resetGame();
     playerSymbol = 'O';
+    flawActivasion();
     board[1][1] = 'X';
     startGame();
     updateBoard();
@@ -33,8 +42,10 @@ document.getElementById('choose-o').addEventListener('click', function () {
 });
 
 function flawActivasion() {
-    // here we will make a 38% chance for the flaw to happen if player is x, otherwise 50%
-    if (Math.random() < (playerSymbol === 'X' ? 0.38 : 0.5)) {
+    // here we will make a 20% chance for the flaw to happen if player is x, otherwise 50%
+    let randomNumber = Math.random()
+    if (!isImpossibleMode && (randomNumber < (playerSymbol === 'X' ? 0.2 : 0.5))) {
+        console.log("Hah Yeah you deserve to win :D")
         flawHappend = false;
     }
 }
@@ -57,7 +68,7 @@ function updateTurnIndicators() {
 }
 
 function startGame() {
-    flawActivasion();
+    // flawActivasion();
     document.querySelector('.choose-plyer-first').classList.add('hide');
     document.querySelector('.turn-both').classList.remove('before-play');
     let cells = document.querySelectorAll('.cell');
@@ -217,7 +228,6 @@ function resetGame() {
     updateBoard();
     playerSymbol = ''
     canPlay = false;
-    flawActivasion();
     xRes.textContent = 0;
     oRes.textContent = 0;
     drawRes.textContent = 0;
