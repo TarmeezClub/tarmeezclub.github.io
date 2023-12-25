@@ -19,7 +19,7 @@ document.getElementById('reset-game').addEventListener('click', function () {
     resetGame();
 });
 document.getElementById('game-mode').addEventListener('click',function(){
-    isImpossibleMode=!isImpossibleMode
+    isImpossibleMode = !isImpossibleMode
     resetGame();})
 
 document.getElementById('choose-o').addEventListener('click', function () {
