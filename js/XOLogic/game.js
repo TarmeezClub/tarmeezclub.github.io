@@ -45,6 +45,8 @@ function flawActivasion() {
     if (!isImpossibleMode && (randomNumber < (playerSymbol === 'X' ? 0.2 : 0.5))) {
         // console.log("Hah Yeah you deserve to win :D")
         flawHappend = false;
+    } else {
+        flawHappend = true;
     }
 }
 
