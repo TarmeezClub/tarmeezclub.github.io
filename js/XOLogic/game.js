@@ -8,10 +8,11 @@ let oRes = document.querySelector("#total-o");
 let drawRes = document.querySelector("#total-draw");
 
 // create a button to change the game mode after that unComment the event listener
-// document.getElementById('gameMode').addEventListener('click', function () {
-//     isImpossibleMode = !isImpossibleMode
-//     resetGame();
-// });
+document.getElementById('game-mode').addEventListener('click', function () {
+    resetGame();
+    changeContent();
+    isImpossibleMode = !isImpossibleMode;
+});
 
 document.getElementById('choose-x').addEventListener('click', function () {
     resetGame();
@@ -21,6 +22,7 @@ document.getElementById('choose-x').addEventListener('click', function () {
     updateTurnIndicators();
     canPlay = true;
 });
+
 
 document.getElementById('reset-game').addEventListener('click', function () {
     resetGame();
@@ -231,3 +233,14 @@ function resetGame() {
     document.querySelector('.turn-both').classList.add('before-play');
     updateTurnIndicators();
 }
+function changeContent() {
+    var button = document.getElementById("game-mode");
+    if (button.innerHTML === "صعب") {
+    
+      button.innerHTML = "مستحيل";
+    } else {
+    
+      button.innerHTML = "صعب";
+    }
+  }
+  
