@@ -224,7 +224,8 @@ button svg {
   #game-mode{
 
     display: inline-block;
-    padding: 10px 20px;
+    width: 100px;
+    padding: 6px 0px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
