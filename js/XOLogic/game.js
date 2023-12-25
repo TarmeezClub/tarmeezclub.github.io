@@ -14,9 +14,13 @@ document.getElementById('choose-x').addEventListener('click', function () {
     canPlay = true;
 });
 
+
 document.getElementById('reset-game').addEventListener('click', function () {
     resetGame();
 });
+document.getElementById('game-mode').addEventListener('click',function(){
+    isImpossibleMode=!isImpossibleMode
+    resetGame();})
 
 document.getElementById('choose-o').addEventListener('click', function () {
     resetGame();
@@ -221,3 +225,16 @@ function resetGame() {
     document.querySelector('.turn-both').classList.add('before-play');
     updateTurnIndicators();
 }
+function changeContent() {
+    var button = document.getElementById("game-mode");
+    
+ 
+    if (button.innerHTML === "صعب") {
+    
+      button.innerHTML = "مستحيل";
+    } else {
+    
+      button.innerHTML = "صعب";
+    }
+  }
+  
