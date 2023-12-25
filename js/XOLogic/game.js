@@ -43,7 +43,7 @@ function flawActivasion() {
     // here we will make a 20% chance for the flaw to happen if player is x, otherwise 50%
     let randomNumber = Math.random()
     if (!isImpossibleMode && (randomNumber < (playerSymbol === 'X' ? 0.2 : 0.5))) {
-        console.log("Hah Yeah you deserve to win :D")
+        // console.log("Hah Yeah you deserve to win :D")
         flawHappend = false;
     }
 }
