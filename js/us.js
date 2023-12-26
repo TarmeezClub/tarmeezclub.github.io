@@ -13,12 +13,12 @@ let worksIcons = {
 let namesIcons = {
     "java":"Java",
     "py":"Python",
-    "js":"Java Script",
+    "js":"JavaScript",
     "swift":"Swift",
     "graphic":"مصمم انفوجرفك",
     "camera":"مصور",
     "editoer":"مُمنتج",
-    "cg":"خطاط",
+    "cg":"خطاط - رسام",
     "sw":"كاتب محتوى"
 }
 let membersSection = document.querySelector('#members');
