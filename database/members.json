@@ -48,6 +48,11 @@
 
     "قسم اللجنة الإعلامية":[
         {
+            "name":"هيا منصور السميح",
+            "description":"قائدة اللجنة الإعلامية",
+            "works":["graphic","editoer"]
+        },
+        {
             "name":"منيرة البريدي",
             "description":"كاتبة محتوى",
             "works":["camera","editoer"]
