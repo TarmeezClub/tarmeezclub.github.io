@@ -554,7 +554,7 @@ body {
   left: 0;
 }
 .carousel-item img {
-  min-height: 700px !important;
+  /* min-height: 700px !important; */
   overflow: hidden;
 }
 .carousel-indicators button {
@@ -584,15 +584,18 @@ body {
 }
 .text-content {
   position: absolute;
-  bottom: 260px;
   left: 50%;
+  top: 30%;
   transform: translateX(-50%);
   z-index: 2;
 }
 .text-content h5 {
   color: var(--main-color);
   font-weight: bold;
-  font-size: 60px;
+  font-size: 28px;
+}
+#carouselExampleCaptions{
+  margin-top: 60px;
 }
 .text-content p {
   color: white;
@@ -618,9 +621,7 @@ body {
   z-index: -5;
 }
 @media (max-width: 1024px) {
-  .text-content {
-    bottom: 160px !important;
-  }
+
 }
 @media (max-width:783px) or (max-width: 1024px){
     #carouselExampleCaptions{
@@ -630,27 +631,27 @@ body {
         bottom: 70px !important;
     }
     .text-content h5{
-        font-size: 36px;
+        font-size: 20px;
     }
     .text-content p{
-        font-size:12px;
+        font-size:14px;
         margin-top: 1rem;
     }
     .carousel-inner::after{
         box-shadow: 0px -100px 8000px 140px #000000 !important;
     }
-    .carousel-item img{
+    /* .carousel-item img{
         min-height: 400px !important;
-    }
+    } */
 }
 @media screen and (max-width: 700px){
     /* nav style*/
     nav a{
         font-size: 16px;
     }
-    .button a{
-        /* padding: 0px 10px; */
-    }
+    /* .button a{
+        padding: 0px 10px;
+    } */
     nav ul li a{
         color: #ffffff;
         font-size: 15px;
@@ -754,7 +755,7 @@ body {
         bottom: 38px !important;
     }
     .text-content h5{
-        font-size: 18px;
+        font-size: 14px;
     }
     .text-content p{
         font-size: 8px;

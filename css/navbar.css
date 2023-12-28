@@ -83,7 +83,7 @@ a:hover {
 nav a img {
   cursor: pointer;
 }
-@media (max-width: 783px) {
+@media (max-width: 905px) {
   nav {
     justify-content: flex-start;
   }
