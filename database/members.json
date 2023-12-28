@@ -10,19 +10,19 @@
 
     "قسم البرمجة والتطوير":[
         {
-            "name":"صالح نواف البطي",
-            "description":"مطور تطبيقات iOS",
-            "works":["java","py","swift"]
-        },
-        {
             "name":"عمر سعد بن شعيل",
             "description":"مطور مواقع",
-            "works":["java","py","js"]
+            "works":["java","js"]
         },
         {
             "name":"محمد صالح الحواس",
             "description":"مطور مواقع",
-            "works":["java","py", "js"]
+            "works":["java","js"]
+        },
+        {
+            "name":"صالح نواف البطي",
+            "description":"مطور تطبيقات iOS",
+            "works":["java","py","swift"]
         },
         {
             "name":"خزامى السنان",
@@ -47,6 +47,11 @@
     ],
 
     "قسم اللجنة الإعلامية":[
+        {
+            "name":"هيا منصور السميح",
+            "description":"قائدة اللجنة الإعلامية",
+            "works":["graphic","editoer","cg"]
+        },
         {
             "name":"منيرة البريدي",
             "description":"كاتبة محتوى",

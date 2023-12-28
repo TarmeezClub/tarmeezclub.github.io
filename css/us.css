@@ -209,9 +209,9 @@ body{
     flex-wrap: nowrap;
     margin: 0px 40px;
     margin-bottom: 90px;
-    transition: .3s;
-    transform: translateY(20%);
-    opacity: 0;
+    /* transition: .3s;
+    transform: translateY(20%); */
+    opacity: 1;
 }
 .backgorund-java{
     font-family: "Open Sans";
@@ -282,12 +282,12 @@ h4{
 .text p{
     color: white;
 }
-.reval{
+/* .reval{
     
     transform: translateY(0);
     opacity: 1;
     
-}
+} */
 
 @media (max-width:783px){
 

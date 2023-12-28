@@ -5,7 +5,7 @@ window.addEventListener("scroll", ()=>{
     let arrowsLR = document.querySelectorAll('.content-text')
     let windowHeight = window.innerHeight;
     let elementTop = h2ContestText.getBoundingClientRect().top;
-    let elementVisible = 150;
+    let elementVisible = 20;
     if (elementTop < windowHeight - elementVisible) {
         h2ContestText.classList.add("show");
     } else {
