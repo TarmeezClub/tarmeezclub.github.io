@@ -218,7 +218,6 @@ button svg {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
   border: 2px solid #3498db;
   color: #3498db;
@@ -244,26 +243,10 @@ button svg {
     margin-top: 10px;
   }
   #game-mode{
-
-    display: inline-block;
-    width: 100px;
-    padding: 6px 0px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 2px solid #3498db;
-    color: #3498db;
-    background-color: #fff;
-    border-radius: 4px;
-   
-    
+    width: 80px;
+    font-size: 14px;
     }
-    #game-mode:hover {
-      background-color: #3498db;
-      color: #fff;
-    }
+  
   }
  
 
