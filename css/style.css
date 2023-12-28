@@ -599,7 +599,7 @@ body {
 }
 .text-content p {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 20px;
 }
 .carousel-control-prev-icon,
@@ -635,7 +635,7 @@ body {
     }
     .text-content p{
         font-size:14px;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
     .carousel-inner::after{
         box-shadow: 0px -100px 8000px 140px #000000 !important;
@@ -755,11 +755,11 @@ body {
         bottom: 38px !important;
     }
     .text-content h5{
-        font-size: 14px;
+        font-size: 10px;
     }
     .text-content p{
-        font-size: 8px;
-        margin-bottom: 1rem;
+        font-size: 7px;
+        margin-bottom: 0rem;
     }
     .carousel-inner::after{
         bottom: -160px;
