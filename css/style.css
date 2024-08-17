@@ -796,3 +796,74 @@ body {
   }
   
 }
+
+
+#accomp {
+  padding: 20px;
+}
+
+.box1, .box2, .box3, .box4 {
+    display: flex;
+    align-items: stretch;
+    padding: 10px;
+    background: linear-gradient(180deg, #ffffff00, #8888881e);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box1, .box3 {
+    flex-direction: row;
+}
+
+.box2, .box4 {
+    flex-direction: row-reverse;
+}
+
+.img-fluid {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.acctext-content {
+  max-width: 90%; /* Limit the width of the text container */
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ddd;
+  font-size: 13px;
+  overflow-wrap: break-word; /* Ensure long words break to fit inside the container */
+  overflow: hidden; /* Hide any overflowing content */
+  padding: 10px;
+}
+
+
+
+
+.acctext-content h6 {
+    color: var(--main-color);
+    z-index: 1;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+    .acctext-content, .img-fluid {
+        max-width: 100%;
+    }
+    .img-fluid {
+        height: auto;
+        width: 100%;
+        max-height: none;
+    }
+}
+
+
