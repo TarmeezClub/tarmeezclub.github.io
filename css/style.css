@@ -275,7 +275,8 @@ body {
 .content-text h2 {
   position: relative;
 }
-.content-text h2::before {
+
+/* .content-text h2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -283,14 +284,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: #1a1a1a;
-  /* border-right: 2px solid var(--main-color); */
-  transition: all 1s;
-  /* transition: border-right 3s; */
-}
-.content-text h2.show::before {
-  width: 0;
-  /* border-right: 2px solid transparent; */
-}
+  
+} */
 .content-text p span {
   color: var(--main-color);
   font-weight: bolder;
@@ -620,8 +615,14 @@ body {
   border-radius: 50%;
   z-index: -5;
 }
-@media (max-width: 1024px) {
+
+.writable-animation {
+  width: fit-content;
+  border-left: 2px solid var(--main-color);
+  animation: blink 1s step-end infinite;
+  margin: 0 auto;
 }
+
 @media (max-width: 783px) or (max-width: 1024px) {
   #carouselExampleCaptions {
     width: 100% !important;
@@ -793,7 +794,17 @@ body {
     transform: translateY(0);
   }
 }
-
+@keyframes blink {
+  0% {
+    border-left-color: var(--main-color);
+  }
+  50% {
+    border-left-color: transparent;
+  }
+  100% {
+    border-left-color: var(--main-color);
+  }
+}
 #accomp {
   padding: 20px;
   margin-top: 35px;
