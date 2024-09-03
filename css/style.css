@@ -275,7 +275,8 @@ body {
 .content-text h2 {
   position: relative;
 }
-.content-text h2::before {
+
+/* .content-text h2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -283,14 +284,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: #1a1a1a;
-  /* border-right: 2px solid var(--main-color); */
-  transition: all 1s;
-  /* transition: border-right 3s; */
-}
-.content-text h2.show::before {
-  width: 0;
-  /* border-right: 2px solid transparent; */
-}
+  
+} */
 .content-text p span {
   color: var(--main-color);
   font-weight: bolder;
@@ -594,7 +589,7 @@ body {
   font-weight: bold;
   font-size: 28px;
 }
-#carouselExampleCaptions{
+#carouselExampleCaptions {
   margin-top: 60px;
 }
 .text-content p {
@@ -620,50 +615,55 @@ body {
   border-radius: 50%;
   z-index: -5;
 }
-@media (max-width: 1024px) {
 
+.writable-animation {
+  width: fit-content;
+  border-left: 2px solid var(--main-color);
+  animation: blink 1s step-end infinite;
+  margin: 0 auto;
 }
-@media (max-width:783px) or (max-width: 1024px){
-    #carouselExampleCaptions{
-        width: 100% !important;
-    }
-    .text-content{
-        bottom: 70px !important;
-    }
-    .text-content h5{
-        font-size: 20px;
-    }
-    .text-content p{
-        font-size:14px;
-        margin-top: 0.5rem;
-    }
-    .carousel-inner::after{
-        box-shadow: 0px -100px 8000px 140px #000000 !important;
-    }
-    /* .carousel-item img{
+
+@media (max-width: 783px) or (max-width: 1024px) {
+  #carouselExampleCaptions {
+    width: 100% !important;
+  }
+  .text-content {
+    bottom: 70px !important;
+  }
+  .text-content h5 {
+    font-size: 20px;
+  }
+  .text-content p {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+  .carousel-inner::after {
+    box-shadow: 0px -100px 8000px 140px #000000 !important;
+  }
+  /* .carousel-item img{
         min-height: 400px !important;
     } */
 }
-@media screen and (max-width: 700px){
-    /* nav style*/
-    nav a{
-        font-size: 16px;
-    }
-    /* .button a{
+@media screen and (max-width: 700px) {
+  /* nav style*/
+  nav a {
+    font-size: 16px;
+  }
+  /* .button a{
         padding: 0px 10px;
     } */
-    nav ul li a{
-        color: #ffffff;
-        font-size: 15px;
-    }
-    .button a{
-        padding: 0.5px 8.5px;
-        border-radius: 5px;
-        border: 2.3px white solid ;
-        transition: 0.35s;
-    }
-    /* nav style end*/
-    /* start style slider image*/
+  nav ul li a {
+    color: #ffffff;
+    font-size: 15px;
+  }
+  .button a {
+    padding: 0.5px 8.5px;
+    border-radius: 5px;
+    border: 2.3px white solid;
+    transition: 0.35s;
+  }
+  /* nav style end*/
+  /* start style slider image*/
 
   .slide img {
     height: 100%;
@@ -725,51 +725,50 @@ body {
     height: 320px;
   }
 
-    /* side images */
-    #carouselExampleCaptions{
-        width: 100% !important;
-    }
-    .our-team .container{
-        flex-direction: column !important;
-    }
-    .our-team .text, .our-team .image{
-        width: auto;
-    }
-    .count{
-        padding-left: 0;
-    }
-    .container .text {
-        padding: 0 20px;
-    }
-    .carousel-item img{
-        min-height: 0 !important;
-    }
+  /* side images */
+  #carouselExampleCaptions {
+    width: 100% !important;
+  }
+  .our-team .container {
+    flex-direction: column !important;
+  }
+  .our-team .text,
+  .our-team .image {
+    width: auto;
+  }
+  .count {
+    padding-left: 0;
+  }
+  .container .text {
+    padding: 0 20px;
+  }
+  .carousel-item img {
+    min-height: 0 !important;
+  }
 
-    h2.show {
-        margin-top: 2rem;
-    }
-    .content-text h1::after{
-        bottom: -10px;
-    }
-    .text-content{
-        bottom: 38px !important;
-    }
-    .text-content h5{
-        font-size: 10px;
-    }
-    .text-content p{
-        font-size: 7px;
-        margin-bottom: 0rem;
-    }
-    .carousel-inner::after{
-        bottom: -160px;
-    }
-    ul.links{
-        width: 40% !important;
-    }
-    /* end style list*/
-
-
+  h2.show {
+    margin-top: 2rem;
+  }
+  .content-text h1::after {
+    bottom: -10px;
+  }
+  .text-content {
+    bottom: 38px !important;
+  }
+  .text-content h5 {
+    font-size: 10px;
+  }
+  .text-content p {
+    font-size: 7px;
+    margin-bottom: 0rem;
+  }
+  .carousel-inner::after {
+    bottom: -160px;
+  }
+  ul.links {
+    width: 40% !important;
+  }
+  /* end style list*/
 }
 @keyframes toleft {
   0% {
@@ -794,5 +793,87 @@ body {
   100% {
     transform: translateY(0);
   }
-  
+}
+@keyframes blink {
+  0% {
+    border-left-color: var(--main-color);
+  }
+  50% {
+    border-left-color: transparent;
+  }
+  100% {
+    border-left-color: var(--main-color);
+  }
+}
+#accomp {
+  padding: 20px;
+  margin-top: 35px;
+}
+
+.box {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  padding: 10px;
+  background: linear-gradient(180deg, #ffffff00, #8888881e);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box:nth-child(odd) {
+  flex-direction: row;
+}
+
+.box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.img-fluid {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.acctext-content {
+  max-width: 90%; /* Limit the width of the text container */
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ddd;
+  font-size: 13px;
+  overflow-wrap: break-word; /* Ensure long words break to fit inside the container */
+  overflow: hidden; /* Hide any overflowing content */
+  padding: 10px;
+}
+.acctext-content h3 {
+  color: var(--main-color);
+}
+.acctext-content p {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 5px;
+  }
+  .acctext-content,
+  .img-fluid {
+    max-width: 100%;
+  }
+  .img-fluid {
+    height: auto;
+    width: 100%;
+    max-height: none;
+  }
+  .acctext-content h3 {
+    font-size: 12px;
+  }
+  .acctext-content p {
+    font-size: 10px;
+  }
 }
